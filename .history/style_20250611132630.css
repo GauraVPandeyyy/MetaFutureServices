@@ -109,22 +109,11 @@ h2 {
         width: 250px;
     }
 
-    .top-box {
+    .top-box{
         display: none;
     }
-
-    .bottom-box {
-        height: 100px;
-    }
-
-    span {
-        color: #0d6efd;
-    }
-
-    .photo-img {
-        border-top-left-radius: 50%;
-        border-top-right-radius: 50%;
-        border-top: 3px solid #0d6efd;
+    .bottom-box{
+        height: 1;
     }
 }
 
@@ -159,8 +148,6 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
 }
 
 .text-highlight {

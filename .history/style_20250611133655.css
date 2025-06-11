@@ -160,7 +160,7 @@ h2 {
     height: 100%;
     object-fit: cover;
     border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
+    border-top-right-radius: 15%;
 }
 
 .text-highlight {
