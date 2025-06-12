@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- link swiper js-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+      <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cl.css">
+</head>
+
+<body>
+
+
+  <div class="main-section">
+
+    <!-- Navbar.... -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top rounded-4">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">TechNovate</a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+          </ul>
+          <!-- CTA Button -->
+          <a href="#contact" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">Get a Quote</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- hero section .... -->
+    <section class="hero-section d-flex align-items-center justify-content-center">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <!-- Left Content -->
+          <div class="col-lg-6">
+            <div class="hero-text glass-card p-5 rounded-4">
+              <h1 class="display-3 fw-bold mb-4">Scalable IT Solutions<br /><span class="gradient-text">for Modern
+                  Businesses</span></h1>
+              <p class="lead mb-4">Web development, cloud architecture, and digital acceleration—delivered with
+                precision.</p>
+              <a href="#contact" class="btn btn-lg btn-glow">Get Free Consultation</a>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6 text-center">
+            <div class="hero-img-wrapper">
+              <img src="./assets/hero-img.png" alt="Tech Illustration" class="hero-img img-fluid">
+              <div class="floating-shape"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <span></span>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section id="services" class="services-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold text-white">Our Core Services</h2>
+          <p class="text-light">Tailored IT solutions to fuel your business transformation</p>
+        </div>
+
+        <div class="row gy-4 gx-5 justify-content-center">
+          <!-- Single Service Card -->
+          <div class="col-lg-4 col-md-6 service-card">
+            <div class="glass-service p-4 rounded-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="bi bi-window-stack"></i>
+              </div>
+              <h5 class="fw-semibold text-white mb-2">Web Development</h5>
+              <p class="text-light">Responsive, scalable websites with modern stacks.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-card">
+            <div class="glass-service p-4 rounded-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="bi bi-cloud-check"></i>
+              </div>
+              <h5 class="fw-semibold text-white mb-2">Cloud Deployment</h5>
+              <p class="text-light">Deploy secure, fast, scalable cloud infrastructure.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-card">
+            <div class="glass-service p-4 rounded-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h5 class="fw-semibold text-white mb-2">Mobile App Development</h5>
+              <p class="text-light">Performance-driven apps across all platforms.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-card">
+            <div class="glass-service p-4 rounded-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h5 class="fw-semibold text-white mb-2">IT Consulting</h5>
+              <p class="text-light">Strategy to modernize, optimize, and grow tech systems.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-card">
+            <div class="glass-service p-4 rounded-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="bi bi-robot"></i>
+              </div>
+              <h5 class="fw-semibold text-white mb-2">AI & Automation</h5>
+              <p class="text-light">Automate workflows using cutting-edge AI tools.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-card">
+            <div class="glass-service p-4 rounded-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <h5 class="fw-semibold text-white mb-2">Cybersecurity</h5>
+              <p class="text-light">Secure your infrastructure from evolving threats.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- our clients -->
+
+    <section class="py-5 rounded-4 mt-4">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-white">Hear From Our Valued Clients</h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="logo-slider">
+      <div class="logo-track">
+
+        <img src="./assets/logo02.png" alt="Logo 2">
+        <img src="./assets/logo03.png" alt="Logo 3">
+        <img src="./assets/logo04.png" alt="Logo 4">
+        <img src="./assets/logo05.png" alt="Logo 5">
+        <img src="./assets/logo06.png" alt="Logo 6">
+        <img src="./assets/logo07.png" alt="Logo 7">
+        <img src="./assets/logo08.png" alt="Logo 8">
+
+        <!-- for smooth animation -->
+
+
+        <img src="./assets/logo02.png" alt="Logo 2">
+        <img src="./assets/logo03.png" alt="Logo 3">
+        <img src="./assets/logo04.png" alt="Logo 4">
+        <img src="./assets/logo05.png" alt="Logo 5">
+        <img src="./assets/logo06.png" alt="Logo 6">
+        <img src="./assets/logo07.png" alt="Logo 7">
+        <img src="./assets/logo08.png" alt="Logo 8">
+
+
+
+      </div>
+    </div>
+
+
+    <!-- our Projects -->
+
+    <section class="py-5 mt-4">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="fw-bold text-white">See Our Work. Imagine Yours.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="row">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/thumb1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb3.jpg" />
+              </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO part -->
+
+    <section class="py-5 bg-white rounded-4 mt-5">
+      <div class="container">
+
+        <div class="row">
+          <!-- Left section with photo -->
+          <div class="col-md-5 photo-section position-relative z-3">
+            <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+              alt="CEO" class="photo-img z-3 shadow-lg">
+            <div class="overlay-box bottom-box z-1"></div>
+          </div>
+
+          <!-- Right section with message -->
+          <div class="col-md-7 d-flex flex-column justify-content-center px-5 py-4 position-relative">
+
+            <div class="overlay-box top-box"></div>
+            <h1 class="text-highlight z-3">Welcome Message From<br> <span>CEO </span></h1>
+            <h4 class="mb-3 fw-bold">Welcome Message</h4>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+            <div class="mt-4">
+              <h5 class="fw-bold mb-1">Tom Curies</h5>
+              <p class="text-secondary">CEO & Founder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT US PAGE -->
+
+    <section class="mt-5">
+      <div class="container-fluid">
+        <div class="row">
+
+          <!-- Left Section -->
+          <div class="col-md-5 contact-left d-flex flex-column justify-content-between">
+
+            <div class="row">
+              <div class="col-1">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Chat to us</p>
+                <p class="text-muted mb-0">Our friendly team is here to help.</p>
+                <p>hi@untitledui.com</p>
+              </div>
+
+
+
+              <div class="col-1">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Visit us</p>
+                <p class="text-muted mb-0">Come say hello at our office HQ.</p>
+                <p>100 Smith Street<br>Collingwood VIC 3066 AU</p>
+              </div>
+
+
+              <div class="col-1">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Call us</p>
+                <p class="text-muted mb-0">Mon–Fri from 8am to 5pm.</p>
+                <p>+1 (555) 000-0000</p>
+              </div>
+            </div>
+
+
+            <div class="d-flex gap-3">
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/facebook.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/twitter.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/linkedin.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/youtube-play.png" /></a>
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="col-md-7 contact-right">
+            <h2 class="fw-semibold fs-1">Got ideas? We’ve got the skills. Let’s team up.</h2>
+            <p class="text-dark fw-semibold">Tell us more about yourself and what you’ve got in mind.</p>
+
+            <form class="mt-4">
+              <div class="mb-3">
+                <!-- <label class="form-label">Your name</label> -->
+                <input type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="you@company.com">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="3" placeholder="Tell us a little about the project..."></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">How can we help?</label>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="design1" checked>
+                      <label class="form-check-label" for="design1">Website design</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="ux1" checked>
+                      <label class="form-check-label" for="ux1">UX design</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="research">
+                      <label class="form-check-label" for="research">User research</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="content">
+                      <label class="form-check-label" for="content">Content creation</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="strategy">
+                      <label class="form-check-label" for="strategy">Strategy & consulting</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="other">
+                      <label class="form-check-label" for="other">Other</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-dark mt-3">Let's get started!</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

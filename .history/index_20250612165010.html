@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- link swiper js-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="claude.css"> -->
+  <link rel="stylesheet" href="main.css">
+  <!-- <link rel="stylesheet" href="ceo.css"> -->
+</head>
+
+<body>
+
+
+  <div class="main-section">
+
+
+
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-code me-2"></i>TechNovate
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">
+                <i class="fas fa-home me-1"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">
+                <i class="fas fa-cogs me-1"></i>Services
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#clients">
+                <i class="fas fa-info-circle me-1"></i>Clients
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">
+                <i class="fas fa-project-diagram me-1"></i>Projects
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#team">
+                <i class="fas fa-users me-1"></i>Team
+              </a>
+            </li> -->
+          </ul>
+
+          <!-- CTA Button -->
+          <a href="#contact-us" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">
+            <i class="fas fa-quote-right me-2"></i>Get a Quote
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+    <!-- home -->
+    <section class="hero-section d-flex align-items-center justify-content-center position-relative" id="home">
+      <!-- Floating Orbs -->
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="floating-orb orb-3"></div>
+
+      <!-- Particles -->
+      <div class="particles" id="particles"></div>
+
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <!-- Left Content -->
+          <div class="col-lg-6">
+            <div class="hero-text glass-card p-5 rounded-4" data-aos="fade-up" data-aos-duration="1000">
+              <h1 class="display-3 fw-bold mb-4">
+                Scalable IT Solutions<br />
+                <span class="gradient-text">for Modern Businesses</span>
+              </h1>
+              <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                Web development, cloud architecture, and digital acceleration—delivered with precision and innovation.
+              </p>
+              <div data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="btn btn-lg btn-glow">
+                  <i class="fas fa-rocket me-2"></i>Get Free Consultation
+                </a>
+              </div>
+
+              <!-- Trust Indicators -->
+              <div class="d-flex align-items-center mt-4 pt-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="me-4">
+                  <div class="d-flex text-warning mb-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <small class="text-light opacity-75">5.0 from 50+ clients</small>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center">
+                    <i class="fas fa-shield-alt text-success me-2"></i>
+                    <small class="text-light opacity-75">ISO 27001 Certified</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div class="hero-img-wrapper position-relative">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Modern IT Solutions" class="hero-img img-fluid rounded-4">
+              <div class="floating-shape"></div>
+
+              <!-- Tech Stack Icons -->
+              <div class="position-absolute" style="top: 20%; left: -10%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="800">
+                  <i class="fab fa-react text-info" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+              <div class="position-absolute" style="bottom: 30%; right: -10%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="1000">
+                  <i class="fab fa-aws text-warning" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+              <div class="position-absolute" style="top: 60%; left: -5%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="1200">
+                  <i class="fab fa-docker text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stats - Desktop Only -->
+      <div class="tech-stats d-none d-xl-flex">
+        <div class="stat-card" data-aos="fade-left" data-aos-delay="1000">
+          <div class="stat-number" data-count="500">0</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card" data-aos="fade-left" data-aos-delay="1200">
+          <div class="stat-number" data-count="99">0</div>
+          <div class="stat-label">% Uptime</div>
+        </div>
+        <div class="stat-card" data-aos="fade-left" data-aos-delay="1400">
+          <div class="stat-number" data-count="24">0</div>
+          <div class="stat-label">/ 7 Support</div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="scroll-down" data-aos="fade-up" data-aos-delay="1600">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+      <!-- Floating Background Shapes -->
+      <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2 class="section-title">Our Core Services</h2>
+          <p class="section-subtitle">Cutting-edge IT solutions engineered to transform your business with innovation,
+            scalability, and unmatched performance</p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+          <!-- Service 1: Web Development -->
+          <div class="service-card" data-service="web">
+            <div class="service-icon">
+              <i class="bi bi-window-stack"></i>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">Responsive and scalable websites built with modern tech stacks, optimized for
+              performance and user experience.</p>
+          </div>
+
+          <!-- Service 2: Cloud Deployment -->
+          <div class="service-card" data-service="cloud">
+            <div class="service-icon">
+              <i class="bi bi-cloud-check"></i>
+            </div>
+            <h3 class="service-title">Cloud Deployment</h3>
+            <p class="service-description">Deploy secure, fast, and cost-efficient cloud infrastructure with automated
+              scaling and monitoring.</p>
+          </div>
+
+          <!-- Service 3: Mobile App Development -->
+          <div class="service-card" data-service="mobile">
+            <div class="service-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <h3 class="service-title">Mobile App Development</h3>
+            <p class="service-description">Cross-platform mobile applications focused on exceptional performance,
+              intuitive UX, and seamless integration.</p>
+          </div>
+
+          <!-- Service 4: IT Consulting -->
+          <div class="service-card" data-service="consulting">
+            <div class="service-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h3 class="service-title">IT Consulting</h3>
+            <p class="service-description">Strategic advisory services to upgrade, scale, and secure your systems with
+              data-driven insights and best practices.</p>
+          </div>
+
+          <!-- Service 5: AI & Automation -->
+          <div class="service-card" data-service="ai">
+            <div class="service-icon">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h3 class="service-title">AI & Automation</h3>
+            <p class="service-description">Leverage cutting-edge AI tools and intelligent automation to streamline
+              workflows and boost productivity.</p>
+          </div>
+
+          <!-- Service 6: Cybersecurity -->
+          <div class="service-card" data-service="security">
+            <div class="service-icon">
+              <i class="bi bi-shield-lock"></i>
+            </div>
+            <h3 class="service-title">Cybersecurity</h3>
+            <p class="service-description">Comprehensive security solutions with advanced threat detection, audits, and
+              real-time protection systems.</p>
+          </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            Projects Delivered
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99.9%</span>
+            Uptime Guarantee
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            Support Available
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- our clients -->
+
+    <section class="py-5 rounded-4" id="clients">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="client-project">Hear From Our Valued Clients</h2>
+        </div>
+      </div>
+
+
+      <div class="logo-slider">
+        <div class="logo-track">
+
+          <img src="./assets/logo02.png" alt="Logo 2">
+          <img src="./assets/logo03.png" alt="Logo 3">
+          <img src="./assets/logo04.png" alt="Logo 4">
+          <img src="./assets/logo05.png" alt="Logo 5">
+          <img src="./assets/logo06.png" alt="Logo 6">
+          <img src="./assets/logo07.png" alt="Logo 7">
+          <img src="./assets/logo08.png" alt="Logo 8">
+
+          <!-- for smooth animation -->
+
+
+          <img src="./assets/logo02.png" alt="Logo 2">
+          <img src="./assets/logo03.png" alt="Logo 3">
+          <img src="./assets/logo04.png" alt="Logo 4">
+          <img src="./assets/logo05.png" alt="Logo 5">
+          <img src="./assets/logo06.png" alt="Logo 6">
+          <img src="./assets/logo07.png" alt="Logo 7">
+          <img src="./assets/logo08.png" alt="Logo 8">
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- our Projects -->
+
+    <section class="py-5 mt-4" id="projects">
+      <div class="container">
+        <div class="text-center mb-3">
+          <h2 class="client-project">See Our Work. Imagine Yours.</h2>
+        </div>
+
+
+
+        <div class="row">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/thumb1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb3.jpg" />
+              </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO SECTION -->
+
+    <section class="ceo-section">
+      <!-- Floating Background Elements -->
+      <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+      </div>
+
+      <div class="container">
+        <div class="ceo-container">
+          <div class="row g-0">
+            <!-- Photo Section -->
+            <div class="col-lg-5">
+              <div class="photo-section">
+                <div class="photo-container">
+                  <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+                    alt="CEO Tom Curies" class="photo-main">
+                  <div class="photo-decoration"></div>
+                  <div class="photo-decoration"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="col-lg-7">
+              <div class="content-section">
+                <!-- Quote Decoration -->
+                <div class="quote-decoration">"</div>
+
+                <!-- Section Badge -->
+                <div class="section-badge">
+                  <i class="bi bi-chat-heart"></i>
+                  Leadership Message
+                </div>
+
+                <!-- Welcome Title -->
+                <h1 class="welcome-title">
+                  Welcome to the Future of
+                  <span class="highlight">Innovation</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <h4 class="welcome-subtitle">A Personal Message from Our CEO</h4>
+
+                <!-- Welcome Message -->
+                <p class="welcome-message">
+                  At our core, we believe technology should empower, not complicate. Every solution we craft is driven
+                  by a passion for excellence and a commitment to transforming how businesses operate in the digital
+                  age. Our journey began with a simple vision: to bridge the gap between cutting-edge technology and
+                  real-world business needs.
+                </p>
+
+                <!-- Mini Stats -->
+                <div class="stats-mini">
+                  <div class="stat-mini">
+
+                    <div  data-aos="fade-left" data-aos-delay="1000">
+
+                      <div class="stat-number" data-count="7">0</div>
+                      <span class="stat-mini-label">Years Experience</span>
+                    </div>
+
+
+
+
+
+                    <!-- <span class="stat-mini-number">15+</span>
+                    <span class="stat-mini-label">Years Experience</span> -->
+                  </div>
+                  <div class="stat-mini">
+                    <span class="stat-mini-number">500+</span>
+                    <span class="stat-mini-label">Success Stories</span>
+                  </div>
+                  <div class="stat-mini">
+                    <span class="stat-mini-number">50+</span>
+                    <span class="stat-mini-label">Team Members</span>
+                  </div>
+                </div>
+
+                <!-- CEO Info -->
+                <div class="ceo-info">
+                  <div class="ceo-avatar">TC</div>
+                  <div class="ceo-details">
+                    <h5>Tom Curies</h5>
+                    <p>CEO & Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT US PAGE -->
+
+    <section class="mt-5" id="contact-us">
+      <div class="container-fluid">
+        <div class="row">
+
+          <!-- Left Section -->
+          <div class="col-md-5 contact-left d-flex flex-column justify-content-between">
+
+            <div class="row">
+              <div class="col-1">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Chat to us</p>
+                <p class="text-muted mb-0">Our friendly team is here to help.</p>
+                <p>hi@untitledui.com</p>
+              </div>
+
+
+
+              <div class="col-1">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Visit us</p>
+                <p class="text-muted mb-0">Come say hello at our office HQ.</p>
+                <p>100 Smith Street<br>Collingwood VIC 3066 AU</p>
+              </div>
+
+
+              <div class="col-1">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Call us</p>
+                <p class="text-muted mb-0">Mon–Fri from 8am to 5pm.</p>
+                <p>+1 (555) 000-0000</p>
+              </div>
+            </div>
+
+
+            <div class="d-flex gap-3">
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/facebook.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/twitter.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/linkedin.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/youtube-play.png" /></a>
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="col-md-7 contact-right">
+            <h2 class="fw-semibold fs-1">Got ideas? We’ve got the skills. Let’s team up.</h2>
+            <p class="text-dark fw-semibold">Tell us more about yourself and what you’ve got in mind.</p>
+
+            <form class="mt-4">
+              <div class="mb-3">
+                <!-- <label class="form-label">Your name</label> -->
+                <input type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="you@company.com">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="3" placeholder="Tell us a little about the project..."></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">How can we help?</label>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="design1" checked>
+                      <label class="form-check-label" for="design1">Website design</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="ux1" checked>
+                      <label class="form-check-label" for="ux1">UX design</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="research">
+                      <label class="form-check-label" for="research">User research</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="content">
+                      <label class="form-check-label" for="content">Content creation</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="strategy">
+                      <label class="form-check-label" for="strategy">Strategy & consulting</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="other">
+                      <label class="form-check-label" for="other">Other</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-dark mt-3">Let's get started!</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- GSAP CDN -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script src="main.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

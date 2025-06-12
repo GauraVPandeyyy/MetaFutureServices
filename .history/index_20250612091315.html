@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- link swiper js-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="claude.css">
+</head>
+
+<body>
+
+
+  <div class="main-section">
+
+    <!-- Navbar.... -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top rounded-4">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">TechNovate</a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+          </ul>
+          <!-- CTA Button -->
+          <a href="#contact" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">Get a Quote</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <section class="hero-section d-flex align-items-center justify-content-center position-relative">
+      <!-- Floating Orbs -->
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="floating-orb orb-3"></div>
+
+      <!-- Particles -->
+      <div class="particles" id="particles"></div>
+
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <!-- Left Content -->
+          <div class="col-lg-6">
+            <div class="hero-text glass-card p-5 rounded-4" data-aos="fade-up" data-aos-duration="1000">
+              <h1 class="display-3 fw-bold mb-4">
+                Scalable IT Solutions<br />
+                <span class="gradient-text">for Modern Businesses</span>
+              </h1>
+              <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                Web development, cloud architecture, and digital acceleration—delivered with precision and innovation.
+              </p>
+              <div data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="btn btn-lg btn-glow">
+                  <i class="fas fa-rocket me-2"></i>Get Free Consultation
+                </a>
+              </div>
+
+              <!-- Trust Indicators -->
+              <div class="d-flex align-items-center mt-4 pt-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="me-4">
+                  <div class="d-flex text-warning mb-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <small class="text-light opacity-75">5.0 from 50+ clients</small>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center">
+                    <i class="fas fa-shield-alt text-success me-2"></i>
+                    <small class="text-light opacity-75">ISO 27001 Certified</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div class="hero-img-wrapper position-relative">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Modern IT Solutions" class="hero-img img-fluid rounded-4">
+              <div class="floating-shape"></div>
+
+              <!-- Tech Stack Icons -->
+              <div class="position-absolute" style="top: 20%; left: -10%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="800">
+                  <i class="fab fa-react text-info" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+              <div class="position-absolute" style="bottom: 30%; right: -10%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="1000">
+                  <i class="fab fa-aws text-warning" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+              <div class="position-absolute" style="top: 60%; left: -5%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="1200">
+                  <i class="fab fa-docker text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stats - Desktop Only -->
+      <div class="tech-stats d-none d-xl-flex">
+        <div class="stat-card" data-aos="fade-left" data-aos-delay="1000">
+          <div class="stat-number" data-count="500">0</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card" data-aos="fade-left" data-aos-delay="1200">
+          <div class="stat-number" data-count="99">0</div>
+          <div class="stat-label">% Uptime</div>
+        </div>
+        <div class="stat-card" data-aos="fade-left" data-aos-delay="1400">
+          <div class="stat-number" data-count="24">0</div>
+          <div class="stat-label">/ 7 Support</div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="scroll-down" data-aos="fade-up" data-aos-delay="1600">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+      <!-- Floating Background Shapes -->
+      <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2 class="section-title">Our Core Services</h2>
+          <p class="section-subtitle">Cutting-edge IT solutions engineered to transform your business with innovation,
+            scalability, and unmatched performance</p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+          <!-- Service 1: Web Development -->
+          <div class="service-card" data-service="web">
+            <div class="service-icon">
+              <i class="bi bi-window-stack"></i>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">Responsive and scalable websites built with modern tech stacks, optimized for
+              performance and user experience.</p>
+          </div>
+
+          <!-- Service 2: Cloud Deployment -->
+          <div class="service-card" data-service="cloud">
+            <div class="service-icon">
+              <i class="bi bi-cloud-check"></i>
+            </div>
+            <h3 class="service-title">Cloud Deployment</h3>
+            <p class="service-description">Deploy secure, fast, and cost-efficient cloud infrastructure with automated
+              scaling and monitoring.</p>
+          </div>
+
+          <!-- Service 3: Mobile App Development -->
+          <div class="service-card" data-service="mobile">
+            <div class="service-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <h3 class="service-title">Mobile App Development</h3>
+            <p class="service-description">Cross-platform mobile applications focused on exceptional performance,
+              intuitive UX, and seamless integration.</p>
+          </div>
+
+          <!-- Service 4: IT Consulting -->
+          <div class="service-card" data-service="consulting">
+            <div class="service-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h3 class="service-title">IT Consulting</h3>
+            <p class="service-description">Strategic advisory services to upgrade, scale, and secure your systems with
+              data-driven insights and best practices.</p>
+          </div>
+
+          <!-- Service 5: AI & Automation -->
+          <div class="service-card" data-service="ai">
+            <div class="service-icon">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h3 class="service-title">AI & Automation</h3>
+            <p class="service-description">Leverage cutting-edge AI tools and intelligent automation to streamline
+              workflows and boost productivity.</p>
+          </div>
+
+          <!-- Service 6: Cybersecurity -->
+          <div class="service-card" data-service="security">
+            <div class="service-icon">
+              <i class="bi bi-shield-lock"></i>
+            </div>
+            <h3 class="service-title">Cybersecurity</h3>
+            <p class="service-description">Comprehensive security solutions with advanced threat detection, audits, and
+              real-time protection systems.</p>
+          </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            Projects Delivered
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99.9%</span>
+            Uptime Guarantee
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            Support Available
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- our clients -->
+
+    <section class="py-5 rounded-4 mt-4">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-white">Hear From Our Valued Clients</h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="logo-slider">
+      <div class="logo-track">
+
+        <img src="./assets/logo02.png" alt="Logo 2">
+        <img src="./assets/logo03.png" alt="Logo 3">
+        <img src="./assets/logo04.png" alt="Logo 4">
+        <img src="./assets/logo05.png" alt="Logo 5">
+        <img src="./assets/logo06.png" alt="Logo 6">
+        <img src="./assets/logo07.png" alt="Logo 7">
+        <img src="./assets/logo08.png" alt="Logo 8">
+
+        <!-- for smooth animation -->
+
+
+        <img src="./assets/logo02.png" alt="Logo 2">
+        <img src="./assets/logo03.png" alt="Logo 3">
+        <img src="./assets/logo04.png" alt="Logo 4">
+        <img src="./assets/logo05.png" alt="Logo 5">
+        <img src="./assets/logo06.png" alt="Logo 6">
+        <img src="./assets/logo07.png" alt="Logo 7">
+        <img src="./assets/logo08.png" alt="Logo 8">
+
+
+
+      </div>
+    </div>
+
+
+    <!-- our Projects -->
+
+    <section class="py-5 mt-4">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="fw-bold text-white">See Our Work. Imagine Yours.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="row">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/thumb1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb3.jpg" />
+              </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO part -->
+
+    <section class="py-5 bg-white rounded-4 mt-5">
+      <div class="container">
+
+        <div class="row">
+          <!-- Left section with photo -->
+          <div class="col-md-5 photo-section position-relative z-3">
+            <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+              alt="CEO" class="photo-img z-3 shadow-lg">
+            <div class="overlay-box bottom-box z-1"></div>
+          </div>
+
+          <!-- Right section with message -->
+          <div class="col-md-7 d-flex flex-column justify-content-center px-5 py-4 position-relative">
+
+            <div class="overlay-box top-box"></div>
+            <h1 class="text-highlight z-3">Welcome Message From<br> <span>CEO </span></h1>
+            <h4 class="mb-3 fw-bold">Welcome Message</h4>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+            <div class="mt-4">
+              <h5 class="fw-bold mb-1">Tom Curies</h5>
+              <p class="text-secondary">CEO & Founder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT US PAGE -->
+
+    <section class="mt-5">
+      <div class="container-fluid">
+        <div class="row">
+
+          <!-- Left Section -->
+          <div class="col-md-5 contact-left d-flex flex-column justify-content-between">
+
+            <div class="row">
+              <div class="col-1">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Chat to us</p>
+                <p class="text-muted mb-0">Our friendly team is here to help.</p>
+                <p>hi@untitledui.com</p>
+              </div>
+
+
+
+              <div class="col-1">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Visit us</p>
+                <p class="text-muted mb-0">Come say hello at our office HQ.</p>
+                <p>100 Smith Street<br>Collingwood VIC 3066 AU</p>
+              </div>
+
+
+              <div class="col-1">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="col-11">
+                <p class="fw-bold mb-1"> Call us</p>
+                <p class="text-muted mb-0">Mon–Fri from 8am to 5pm.</p>
+                <p>+1 (555) 000-0000</p>
+              </div>
+            </div>
+
+
+            <div class="d-flex gap-3">
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/facebook.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/twitter.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/linkedin.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" /></a>
+              <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/youtube-play.png" /></a>
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="col-md-7 contact-right">
+            <h2 class="fw-semibold fs-1">Got ideas? We’ve got the skills. Let’s team up.</h2>
+            <p class="text-dark fw-semibold">Tell us more about yourself and what you’ve got in mind.</p>
+
+            <form class="mt-4">
+              <div class="mb-3">
+                <!-- <label class="form-label">Your name</label> -->
+                <input type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="you@company.com">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="3" placeholder="Tell us a little about the project..."></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">How can we help?</label>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="design1" checked>
+                      <label class="form-check-label" for="design1">Website design</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="ux1" checked>
+                      <label class="form-check-label" for="ux1">UX design</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="research">
+                      <label class="form-check-label" for="research">User research</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="content">
+                      <label class="form-check-label" for="content">Content creation</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="strategy">
+                      <label class="form-check-label" for="strategy">Strategy & consulting</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="other">
+                      <label class="form-check-label" for="other">Other</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-dark mt-3">Let's get started!</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+
+    // Counter Animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('[data-count]');
+
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current);
+          }
+        }, 16);
+      });
+    }
+
+    // Start counter animation when in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.disconnect();
+        }
+      });
+    });
+
+    const statsSection = document.querySelector('.tech-stats');
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
+
+    // Particle System
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 15 + 's';
+      particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+
+      document.getElementById('particles').appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 25000);
+    }
+
+    // Create particles periodically
+    setInterval(createParticle, 3000);
+
+    // Smooth scroll for CTA button
+    document.querySelector('.btn-glow').addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+
+    // Mouse parallax effect for hero image
+    document.addEventListener('mousemove', (e) => {
+      const heroImg = document.querySelector('.hero-img');
+      const rect = heroImg.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = (y - centerY) / centerY * 5;
+      const rotateY = (centerX - x) / centerX * 5;
+
+      heroImg.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    // Loading animation delay for staggered entrance
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+
+
+    // service 
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Initialize animations when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      initializeAnimations();
+      initializeInteractions();
+    });
+
+    function initializeAnimations() {
+      // Animate section title
+      gsap.to('.section-title', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.section-header',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      // Animate section subtitle
+      gsap.to('.section-subtitle', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.section-header',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      // Animate service cards with stagger
+      gsap.to('.service-card', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.services-grid',
+          start: 'top 85%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      // Animate stats
+      gsap.to('.stat-item', {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        delay: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.stats-bar',
+          start: 'top 90%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      // Counter animation for stats
+      const statNumbers = document.querySelectorAll('.stat-number');
+      statNumbers.forEach(stat => {
+        const finalValue = stat.textContent;
+        const isNumber = !isNaN(parseFloat(finalValue));
+
+        if (isNumber) {
+          const numValue = parseFloat(finalValue);
+          gsap.from(stat, {
+            textContent: 0,
+            duration: 2,
+            ease: 'power2.out',
+            snap: { textContent: 1 },
+            scrollTrigger: {
+              trigger: stat,
+              start: 'top 90%',
+              toggleActions: 'play none none reverse'
+            },
+            onUpdate: function () {
+              if (finalValue.includes('+')) {
+                stat.textContent = Math.ceil(this.targets()[0].textContent) + '+';
+              } else if (finalValue.includes('%')) {
+                stat.textContent = Math.ceil(this.targets()[0].textContent) + '%';
+              } else if (finalValue.includes('/')) {
+                stat.textContent = finalValue; // Keep original for 24/7
+              }
+            }
+          });
+        }
+      });
+    }
+
+    function initializeInteractions() {
+      const serviceCards = document.querySelectorAll('.service-card');
+
+      serviceCards.forEach(card => {
+        // Enhanced hover effects
+        card.addEventListener('mouseenter', function () {
+          gsap.to(this.querySelector('.service-icon'), {
+            scale: 1.1,
+            rotation: 5,
+            duration: 0.4,
+            ease: 'power2.out'
+          });
+
+          gsap.to(this, {
+            y: -15,
+            duration: 0.6,
+            ease: 'power2.out'
+          });
+        });
+
+        card.addEventListener('mouseleave', function () {
+          gsap.to(this.querySelector('.service-icon'), {
+            scale: 1,
+            rotation: 0,
+            duration: 0.4,
+            ease: 'power2.out'
+          });
+
+          gsap.to(this, {
+            y: 0,
+            duration: 0.6,
+            ease: 'power2.out'
+          });
+        });
+
+        // Click interaction for mobile
+        card.addEventListener('click', function () {
+          const serviceType = this.dataset.service;
+
+          // Pulse effect on click
+          gsap.to(this, {
+            scale: 0.98,
+            duration: 0.1,
+            yoyo: true,
+            repeat: 1,
+            ease: 'power2.inOut'
+          });
+
+          // Could integrate with your routing/modal system here
+          console.log(`Service clicked: ${serviceType}`);
+        });
+      });
+
+      // Parallax effect for floating shapes
+      if (window.innerWidth > 768) {
+        gsap.to('.shape:nth-child(1)', {
+          y: -50,
+          duration: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.services-section',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1
+          }
+        });
+
+        gsap.to('.shape:nth-child(2)', {
+          y: -30,
+          x: -20,
+          duration: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.services-section',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1
+          }
+        });
+
+        gsap.to('.shape:nth-child(3)', {
+          y: -40,
+          x: 30,
+          duration: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.services-section',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1
+          }
+        });
+      }
+    }
+
+    // Optimize performance
+    let ticking = false;
+
+    function updateAnimations() {
+      // Any continuous animations or updates can go here
+      ticking = false;
+    }
+
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateAnimations);
+        ticking = true;
+      }
+    }
+
+    // Intersection Observer for performance
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    // const observer = new IntersectionObserver(function (entries) {
+    //   entries.forEach(entry => {
+    //     if (entry.isIntersecting) {
+    //       entry.target.classList.add('animate');
+    //     }
+    //   });
+    // }, observerOptions);
+
+    // Observe all service cards
+    document.querySelectorAll('.service-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
