@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
-    /* background-color: #f8f9fa; */
+    background-color: #f8f9fa;
     color: #212529;
     font-family: 'Open Sans', sans-serif;
 }
@@ -12,7 +12,6 @@ body {
     height: 100%;
     background-color: #284283;
     padding: 20px;
-    /* background-image: linear-gradient(to right , #284283, #284283de , #284283 ); */
 }
 
 h1,
@@ -26,11 +25,10 @@ h2 {
 }
 
 .heroBgc {
-    background-color: #b7dbff;
+    /* background-color: #b7dbff; */
 
-    /* background-color: rgba(255, 255, 255, 0.15); */
-    /* Slightly opaque white for frosted effect */
-    /* backdrop-filter: blur(25px) saturate(1.1); */
+    background-color: rgba(255, 255, 255, 0.1); /* White with 10% opacity */
+    backdrop-filter: blur(240px);
 }
 
 .card:hover {
@@ -164,7 +162,7 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 45% 45% 0 0;
+    border-radius : 45% 45% 0 0;
     border-top: 4px solid #0d6efd;
     /* z-index: 22; */
 }
@@ -176,41 +174,38 @@ h2 {
 
 /* Contact us */
 
-.contact-left {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 20px 0 0 20px;
-}
+  .contact-left {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px 0 0 20px;
+    }
 
-.contact-left i {
-    font-weight: 900;
-    font-size: 1.3rem;
-}
+    .contact-left i{
+        font-weight: 900;
+        font-size: 1.3rem;
+    }
+    .contact-right {
+      background-color: #b7dbff;
+      padding: 40px;
+      border-radius: 0 20px 20px 0;
+    }
+    .form-check-input:checked {
+      background-color: #000;
+      border-color: #000;
+    }
+    .btn-dark {
+      width: 100%;
+    }
 
-.contact-right {
-    background-color: #b7dbff;
-    padding: 40px;
-    border-radius: 0 20px 20px 0;
-}
+    .form-control{
+        outline: none;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #284283;
+        border-radius: none;
 
-.form-check-input:checked {
-    background-color: #000;
-    border-color: #000;
-}
+    }
 
-.btn-dark {
-    width: 100%;
-}
-
-.form-control {
-    outline: none;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #284283;
-    border-radius: none;
-
-}
-
-.form-control:active {
-    background-color: transparent;
-}
+    .form-control:active{
+        background-color: transparent;
+    }
