@@ -666,14 +666,9 @@ body {
         padding: 0;
     }
 
-    .navbar.scrolled .navbar-brand {
-        font-size: 1.2rem;
-
-    }
-
     .navbar-brand {
-
-        font-size: 1.4rem;
+        font-weight: 700 !important;
+        font-size: 1.8rem;
     }
 
     .hero-text h1 {
