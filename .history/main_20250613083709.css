@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
+    /* background-color: #f8f9fa; */
+    /* color: #212529;
+    font-family: 'Open Sans', sans-serif; */
+
     background: var(--primary-color);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
@@ -580,7 +584,7 @@ body {
 }
 
 /* Tech Stats Cards */
-.tech-stats-home {
+.tech-stats {
     position: absolute;
     right: 20px;
     top: 50%;

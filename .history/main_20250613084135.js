@@ -2,7 +2,7 @@
 AOS.init({
     duration: 1000,
     once: true,
-    offset: 50
+    offset: 100
 });
 
 
@@ -114,7 +114,7 @@ const observer1 = new IntersectionObserver((entries) => {
     });
 });
 
-const statsSection = document.querySelector('.tech-stats-home');
+const statsSection = document.querySelector('.tech-stats');
 if (statsSection) {
     observer1.observe(statsSection);
 }

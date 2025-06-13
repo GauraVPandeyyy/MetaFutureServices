@@ -2,7 +2,7 @@
 AOS.init({
     duration: 1000,
     once: true,
-    offset: 50
+    offset: 100
 });
 
 
@@ -114,7 +114,7 @@ const observer1 = new IntersectionObserver((entries) => {
     });
 });
 
-const statsSection = document.querySelector('.tech-stats-home');
+const statsSection = document.querySelector('.tech-stats');
 if (statsSection) {
     observer1.observe(statsSection);
 }
@@ -435,7 +435,7 @@ function animateCounter(element, target, duration = 2000) {
 }
 
 // Initialize counters when they come into view
-const observerOptionsClient = {
+const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px'
 };
@@ -448,7 +448,7 @@ const observerClient = new IntersectionObserver((entries) => {
             observerClient.unobserve(entry.target);
         }
     });
-}, observerOptionsClient);
+}, observerOptions);
 
 document.querySelectorAll('.stat-number').forEach(counter => {
     observerClient.observe(counter);

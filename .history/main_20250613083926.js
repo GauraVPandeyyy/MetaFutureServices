@@ -2,7 +2,7 @@
 AOS.init({
     duration: 1000,
     once: true,
-    offset: 50
+    offset: 100
 });
 
 
@@ -114,7 +114,7 @@ const observer1 = new IntersectionObserver((entries) => {
     });
 });
 
-const statsSection = document.querySelector('.tech-stats-home');
+const statsSection = document.querySelector('.tech-stats');
 if (statsSection) {
     observer1.observe(statsSection);
 }
@@ -406,7 +406,7 @@ document.querySelectorAll('.service-card').forEach(card => {
 
 // CLIENT SCROLL JS
 
-// Logo slider pause/resume functionality
+/ Logo slider pause/resume functionality
 const logoSlider = document.getElementById('logoSlider');
 const logoTrack = document.getElementById('logoTrack');
 
@@ -435,23 +435,23 @@ function animateCounter(element, target, duration = 2000) {
 }
 
 // Initialize counters when they come into view
-const observerOptionsClient = {
+const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px'
 };
 
-const observerClient = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const target = parseInt(entry.target.dataset.count);
             animateCounter(entry.target, target);
-            observerClient.unobserve(entry.target);
+            observer.unobserve(entry.target);
         }
     });
-}, observerOptionsClient);
+}, observerOptions);
 
 document.querySelectorAll('.stat-number').forEach(counter => {
-    observerClient.observe(counter);
+    observer.observe(counter);
 });
 
 // Enhanced mouse tracking for floating elements

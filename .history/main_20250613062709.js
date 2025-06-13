@@ -2,7 +2,7 @@
 AOS.init({
     duration: 1000,
     once: true,
-    offset: 50
+    offset: 100
 });
 
 
@@ -114,7 +114,7 @@ const observer1 = new IntersectionObserver((entries) => {
     });
 });
 
-const statsSection = document.querySelector('.tech-stats-home');
+const statsSection = document.querySelector('.tech-stats');
 if (statsSection) {
     observer1.observe(statsSection);
 }
@@ -404,116 +404,7 @@ document.querySelectorAll('.service-card').forEach(card => {
 
 
 
-// CLIENT SCROLL JS
 
-// Logo slider pause/resume functionality
-const logoSlider = document.getElementById('logoSlider');
-const logoTrack = document.getElementById('logoTrack');
-
-logoSlider.addEventListener('mouseenter', function () {
-    logoTrack.style.animationPlayState = 'paused';
-});
-
-logoSlider.addEventListener('mouseleave', function () {
-    logoTrack.style.animationPlayState = 'running';
-});
-
-// Animated counter for stats
-function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16);
-
-    const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-            element.textContent = target + '+';
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(start);
-        }
-    }, 16);
-}
-
-// Initialize counters when they come into view
-const observerOptionsClient = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observerClient = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const target = parseInt(entry.target.dataset.count);
-            animateCounter(entry.target, target);
-            observerClient.unobserve(entry.target);
-        }
-    });
-}, observerOptionsClient);
-
-document.querySelectorAll('.stat-number').forEach(counter => {
-    observerClient.observe(counter);
-});
-
-// Enhanced mouse tracking for floating elements
-document.addEventListener('mousemove', (e) => {
-    const floatingElements = document.querySelectorAll('.floating-element');
-    const x = (e.clientX / window.innerWidth) - 0.5;
-    const y = (e.clientY / window.innerHeight) - 0.5;
-
-    floatingElements.forEach((element, index) => {
-        const speed = (index + 1) * 0.01;
-        const xPos = x * 30 * speed;
-        const yPos = y * 30 * speed;
-
-        element.style.transform = `translate(${xPos}px, ${yPos}px) rotate(${xPos * 0.5}deg)`;
-    });
-});
-
-// Logo hover effects with staggered animations
-document.querySelectorAll('.logo-track img').forEach((img, index) => {
-    img.addEventListener('mouseenter', function () {
-        // Pause the entire animation temporarily
-        logoTrack.style.animationPlayState = 'paused';
-
-        // Add glow effect
-        this.style.boxShadow = '0 0 30px rgba(255, 255, 255, 0.3)';
-        this.style.background = 'rgba(255, 255, 255, 0.05)';
-        this.style.borderRadius = '12px';
-    });
-
-    img.addEventListener('mouseleave', function () {
-        // Resume animation
-        setTimeout(() => {
-            if (!logoSlider.matches(':hover')) {
-                logoTrack.style.animationPlayState = 'running';
-            }
-        }, 100);
-
-        // Remove glow effect
-        this.style.boxShadow = '';
-        this.style.background = '';
-        this.style.borderRadius = '';
-    });
-});
-
-// Smooth scroll integration
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Performance optimization: Reduce animations on low-performance devices
-if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
-    document.documentElement.style.setProperty('--animation-duration', '60s');
-}
 
 
 
@@ -785,102 +676,102 @@ document.querySelectorAll('.ceo-container, .photo-container').forEach(el => {
 
 // contact us
 // Contact Form Submission
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const submitBtn = document.getElementById('submitBtn');
-    const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
-
-    // Hide previous messages
-    successMessage.style.display = 'none';
-    errorMessage.style.display = 'none';
-
-    // Show loading state
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i><span>Sending...</span>';
-
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-        // Simulate success (90% success rate for demo)
-        if (Math.random() > 0.1) {
-            successMessage.style.display = 'flex';
-            this.reset();
-
-            // Reset button after success
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Hide previous messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i><span>Sending...</span>';
+            
+            // Simulate form submission (replace with actual API call)
             setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i><span>Send Message</span>';
+                // Simulate success (90% success rate for demo)
+                if (Math.random() > 0.1) {
+                    successMessage.style.display = 'flex';
+                    this.reset();
+                    
+                    // Reset button after success
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i><span>Send Message</span>';
+                    }, 2000);
+                } else {
+                    errorMessage.style.display = 'flex';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i><span>Send Message</span>';
+                }
             }, 2000);
-        } else {
-            errorMessage.style.display = 'flex';
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i><span>Send Message</span>';
+        });
+
+        // Form field animations
+        document.querySelectorAll('.form-control, .form-select').forEach(field => {
+            field.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+                this.style.borderColor = 'var(--primary-color)';
+            });
+            
+            field.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+                if (!this.value) {
+                    this.style.borderColor = 'rgba(40, 66, 131, 0.1)';
+                }
+            });
+        });
+
+        // Smooth scroll for floating button
+        document.querySelector('.floating-contact').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+
+        // Map click simulation
+        document.querySelector('.map-placeholder button').addEventListener('click', function() {
+            // In a real implementation, this would open Google Maps or similar
+            alert('Opening directions to: 123 Tech Street, Digital City, DC 12345');
+        });
+
+        // Add typing effect to placeholder
+        const messageField = document.querySelector('textarea[name="message"]');
+        const placeholders = [
+            "Tell us about your project requirements...",
+            "What's your timeline for this project?",
+            "Do you have any specific technology preferences?",
+            "What's your budget range for this project?",
+            "Tell us about your business goals..."
+        ];
+        
+        let currentPlaceholder = 0;
+        
+        function changePlaceholder() {
+            if (messageField === document.activeElement) return;
+            
+            messageField.placeholder = placeholders[currentPlaceholder];
+            currentPlaceholder = (currentPlaceholder + 1) % placeholders.length;
         }
-    }, 2000);
-});
+        
+        setInterval(changePlaceholder, 3000);
 
-// Form field animations
-document.querySelectorAll('.form-control, .form-select').forEach(field => {
-    field.addEventListener('focus', function () {
-        this.parentElement.style.transform = 'scale(1.02)';
-        this.style.borderColor = 'var(--primary-color)';
-    });
-
-    field.addEventListener('blur', function () {
-        this.parentElement.style.transform = 'scale(1)';
-        if (!this.value) {
-            this.style.borderColor = 'rgba(40, 66, 131, 0.1)';
-        }
-    });
-});
-
-// Smooth scroll for floating button
-document.querySelector('.floating-contact').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.getElementById('contact').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
-});
-
-// Map click simulation
-document.querySelector('.map-placeholder button').addEventListener('click', function () {
-    // In a real implementation, this would open Google Maps or similar
-    alert('Opening directions to: 123 Tech Street, Digital City, DC 12345');
-});
-
-// Add typing effect to placeholder
-const messageField = document.querySelector('textarea[name="message"]');
-const placeholders = [
-    "Tell us about your project requirements...",
-    "What's your timeline for this project?",
-    "Do you have any specific technology preferences?",
-    "What's your budget range for this project?",
-    "Tell us about your business goals..."
-];
-
-let currentPlaceholder = 0;
-
-function changePlaceholder() {
-    if (messageField === document.activeElement) return;
-
-    messageField.placeholder = placeholders[currentPlaceholder];
-    currentPlaceholder = (currentPlaceholder + 1) % placeholders.length;
-}
-
-setInterval(changePlaceholder, 3000);
-
-// Add real-time form validation
-document.querySelectorAll('input[required], textarea[required]').forEach(field => {
-    field.addEventListener('input', function () {
-        if (this.value.trim()) {
-            this.style.borderColor = 'var(--success-color)';
-        } else {
-            this.style.borderColor = 'rgba(40, 66, 131, 0.1)';
-        }
-    });
-});
+        // Add real-time form validation
+        document.querySelectorAll('input[required], textarea[required]').forEach(field => {
+            field.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.style.borderColor = 'var(--success-color)';
+                } else {
+                    this.style.borderColor = 'rgba(40, 66, 131, 0.1)';
+                }
+            });
+        });
 
 
 // footer
