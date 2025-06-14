@@ -90,8 +90,7 @@ body {
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     box-shadow: var(--shadow-light);
-    /* jab scroll down hota hai tab */
-    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); 
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
     padding: 1.2rem 0;
     border-radius: 0 0 24px 24px !important;
     margin: 0 0 20px 0;
@@ -231,6 +230,10 @@ body {
     }
 }
 
+.navbar {
+    animation: slideIn 0.6s ease-out;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     position: fixed;
@@ -240,7 +243,7 @@ body {
     height: 3px;
     background: var(--primary-gradient);
     z-index: 9999;
-    transition: width 0.9s ease;
+    transition: width 0.1s ease;
 }
 
 /* Hero Section Background */
@@ -624,7 +627,221 @@ body {
     margin-top: 5px;
 }
 
+/* Responsive Design */
+@media (max-width: 991px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
 
+    .tech-stats-home {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .stat-card-home {
+        width: 100px;
+        padding: 15px;
+    }
+
+    .stat-number-home {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-section {
+        padding: 0;
+    }
+
+    .navbar.scrolled .navbar-brand {
+        font-size: 1.2rem;
+
+    }
+
+    .navbar-brand {
+
+        font-size: 1.4rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .btn-glow {
+        font-size: 1rem;
+        padding: 14px 28px;
+    }
+
+    .glass-card {
+        padding: 2rem !important;
+    }
+
+    .tech-stats-home {
+        gap: 10px;
+    }
+
+    .stat-card-home {
+        width: 80px;
+        padding: 10px;
+    }
+
+    /* service */
+    .services-section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .stats-bar {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-top: 60px;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    /* CEO section */
+    .ceo-section {
+        padding: 80px 0;
+    }
+
+    .ceo-container {
+        margin: 0 15px;
+        border-radius: 24px;
+    }
+
+    .photo-section {
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .photo-main {
+        width: 280px;
+        height: 350px;
+    }
+
+    .content-section {
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .welcome-title {
+        font-size: 2.2rem;
+    }
+
+    .ceo-info {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .stats-mini {
+        justify-content: center;
+    }
+
+    .quote-decoration {
+        display: none;
+    }
+
+    /* contact */
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-card {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .map-container {
+        height: 350px;
+        margin-bottom: 2rem;
+    }
+
+    .floating-contact {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    /* footer */
+    .footer-content {
+        padding: 60px 0 20px;
+    }
+
+    .footer-brand {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .footer-description {
+        text-align: center;
+        margin: 0 auto 2rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        margin: 0 10px;
+    }
+
+    .photo-main {
+        width: 240px;
+        height: 300px;
+    }
+
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 30px 20px;
+    }
+}
 
 /* Loading Animation */
 @keyframes fadeInUp {
@@ -691,8 +908,7 @@ body {
 .services-section {
     position: relative;
     background: var(--primary-color);
-    padding: 120px 0;
-    /* margin-bottom: 100px; */
+    padding: 60px 0;
     overflow: hidden;
 }
 
@@ -996,8 +1212,7 @@ body {
 #clients {
     background: var(--primary-gradient);
     position: relative;
-    /* margin-top: 250px; */
-    /* margin: 100px 0; */
+    padding: 100px 0;
     overflow: hidden;
 }
 
@@ -1063,7 +1278,7 @@ body {
     border: 1px solid var(--glass-border);
     border-radius: 24px;
     padding: 40px 0;
-    /* margin: 0 20px; */
+    margin: 0 20px;
     box-shadow: var(--shadow-strong);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1268,6 +1483,66 @@ body {
     }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .client-project {
+        font-size: 2.5rem;
+    }
+
+    .logo-track img {
+        width: 100px;
+        height: 60px;
+        margin: 0 20px;
+    }
+
+    .logo-track {
+        width: calc(140px * 14);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-140px * 7));
+        }
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    #clients {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .client-project {
+        font-size: 2rem;
+    }
+
+    .logo-track img {
+        width: 80px;
+        height: 50px;
+        margin: 0 15px;
+    }
+
+    .logo-track {
+        width: calc(110px * 14);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-110px * 7));
+        }
+    }
+}
 
 /* Hover Pause Indicator */
 .pause-indicator {

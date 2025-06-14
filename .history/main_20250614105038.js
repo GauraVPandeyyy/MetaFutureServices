@@ -979,3 +979,64 @@ document.querySelectorAll('.contact-item').forEach(item => {
     });
 });
 
+// Navbar scroll effect and scroll indicator
+window.addEventListener('scroll', function () {
+  const navbar = document.getElementById('mainNavbar');
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = (scrollTop / documentHeight) * 100;
+  scrollIndicator.style.width = scrollPercent + '%';
+  navbar.classList.toggle('scrolled', scrollTop > 50);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Navbar toggler for mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const toggler = document.querySelector(".navbar-toggler");
+  const navbar = document.getElementById("navbarContent");
+  if (toggler && navbar) {
+    toggler.addEventListener("click", function () {
+      navbar.classList.toggle("show");
+    });
+    document.addEventListener("click", function (event) {
+      if (!navbar.contains(event.target) && !toggler.contains(event.target)) {
+        navbar.classList.remove("show");
+      }
+    });
+  }
+});
+
+// Simple particle effect for hero section
+function createParticle() {
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  particle.style.left = Math.random() * 100 + '%';
+  particle.style.top = '100%';
+  particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+  document.getElementById('particles')?.appendChild(particle);
+  setTimeout(() => particle.remove(), 25000);
+}
+setInterval(createParticle, 2000);
+
+// Contact form submission (demo)
+document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const status = document.getElementById('formStatus');
+  status.textContent = "Thank you! We'll get back to you soon.";
+  status.style.color = "var(--accent-color)";
+  this.reset();
+});
+
+// You can add more modular functions for new sections as needed!
+

@@ -218,6 +218,11 @@ body {
 }
 
 
+
+
+.navbar {
+    animation: slideIn 0.6s ease-in-out;
+}
 /* Loading Animation */
 @keyframes slideIn {
     from {

@@ -1,0 +1,59 @@
+@media (max-width : 770px) {
+    .swiper-slide {
+        width: 250px;
+    }
+}
+/* Mobile Styles */
+@media (max-width: 991.98px) {
+    .navbar {
+        margin: 0 10px;
+        border-radius: 0 0 20px 20px !important;
+    }
+
+    .navbar.scrolled {
+        margin: 0 5px;
+        border-radius: 0 0 15px 15px !important;
+    }
+
+    .navbar-collapse {
+        background: var(--glass-bg);
+        border-radius: 16px;
+        margin-top: 1rem;
+        padding: 1rem;
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+    }
+
+    .nav-link {
+        margin: 0.2rem 0;
+        text-align: center;
+    }
+
+    .btn-primary {
+        width: 100%;
+        margin-top: 1rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .tech-stats-home {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .stat-card-home {
+        width: 100px;
+        padding: 15px;
+    }
+
+    .stat-number-home {
+        font-size: 1.5rem;
+    }
+}

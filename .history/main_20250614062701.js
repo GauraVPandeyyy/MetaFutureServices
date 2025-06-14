@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-   
+   ptimi
 });
 
 
@@ -978,4 +978,5 @@ document.querySelectorAll('.contact-item').forEach(item => {
         this.style.transform = 'translateX(0) scale(1)';
     });
 });
+
 
