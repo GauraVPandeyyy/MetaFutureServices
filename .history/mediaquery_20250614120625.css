@@ -1,0 +1,271 @@
+/* Mobile Styles */
+@media (max-width: 991.98px) {
+    .navbar {
+        margin: 0 10px;
+        border-radius: 0 0 20px 20px !important;
+    }
+
+    .navbar.scrolled {
+        margin: 0 5px;
+        border-radius: 0 0 15px 15px !important;
+    }
+
+    .navbar-collapse {
+        background: var(--glass-bg);
+        border-radius: 16px;
+        margin-top: 1rem;
+        padding: 1rem;
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+    }
+
+    .nav-link {
+        margin: 0.2rem 0;
+        text-align: center;
+    }
+
+    .btn-primary {
+        width: 100%;
+        margin-top: 1rem !important;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .tech-stats-home {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .stat-card-home {
+        width: 100px;
+        padding: 15px;
+    }
+
+    .stat-number-home {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Design */
+
+
+@media (max-width: 768px) {
+
+    .main-section { padding: 0 8px; }
+
+    .swiper-slide { height: 180px; }
+
+    .navbar.scrolled .navbar-brand {
+        font-size: 1.2rem;
+
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn-glow {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+
+    .glass-card {
+        padding: 18px 10px;
+    }
+
+    .tech-stats-home {
+        gap: 12px;
+    }
+
+    .stat-card-home {
+        padding: 10px 6px;
+    }
+
+    /* service */
+    .services-section {
+        padding: 60px 0 30px 0;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .services-grid {
+        gap: 16px;
+    }
+
+    .service-card {
+        padding: 18px 10px;
+    }
+
+    .stats-bar {
+        gap: 10px;
+    }
+
+
+
+    .client-project {
+        font-size: 1.2rem;
+    }
+
+    .logo-track img {
+        width: 70px;
+        height: 40px;
+    }
+
+    .logo-track {
+        gap: 18px;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+
+    #clients {
+        padding: 60px 0 30px 0;
+    }
+
+    /* CEO section */
+    .ceo-section {
+        padding: 60px 0 30px 0;
+    }
+
+    .ceo-container {
+        border-radius: 12px;
+    }
+
+    .photo-section {
+        padding: 18px 6px;
+    }
+
+    .photo-main {
+        width: 180px;
+        height: 220px;
+    }
+
+    .content-section {
+        padding: 18px 6px;
+    }
+
+    .welcome-title {
+        font-size: 1.1rem;
+    }
+
+    .ceo-info {
+        gap: 8px;
+    }
+
+    .stats-mini {
+        gap: 8px;
+    }
+
+    .quote-decoration {
+        font-size: 1.5rem;
+    }
+
+    /* contact */
+    .contact-card {
+        padding: 18px 10px;
+    }
+
+    .map-container {
+        height: 120px;
+    }
+
+    .floating-contact {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    /* footer */
+    .footer-content {
+        padding: 30px 0 10px 0;
+    }
+
+    .footer-brand {
+        font-size: 1.1rem;
+    }
+
+    .footer-description {
+        font-size: 0.9rem;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom-links {
+        gap: 0.7rem;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+    .client-project {
+        font-size: 1rem;
+    }
+
+    .logo-track img {
+        width: 50px;
+        height: 28px;
+    }
+
+    .logo-track {
+        gap: 8px;
+    }
+
+    .stat-number {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        padding: 18px 0 6px 0;
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 10px 4px;
+    }
+
+    .photo-main {
+        width: 120px;
+        height: 120px;
+    }
+
+    .welcome-title {
+        font-size: 0.9rem;
+    }
+
+    .content-section {
+        padding: 10px 2px;
+    }
+}
