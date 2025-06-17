@@ -2051,7 +2051,7 @@ textarea.form-control {
 .footer-content {
     position: relative;
     z-index: 2;
-    padding: 80px 0 20px;
+    /* padding: 80px 0 20px; */
 }
 
 .footer-brand {
