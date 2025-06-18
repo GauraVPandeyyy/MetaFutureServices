@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="./assets/mfs-logo.jpg" />
+  <title>Meta Future Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- link swiper js-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- <link rel="stylesheet" href="claude.css"> -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="mediaquery.css">
+  <link rel="stylesheet" href="extaStyle.css">
+</head>
+
+<body>
+
+
+  <div class="main-section">
+
+
+
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <!-- <i class="fas fa-code me-2"></i>TechNovate -->
+          <img src="./assets/saloni.png" alt="">
+        </a>
+
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler border-0" type="button" aria-controls="navbarContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered fs-3"></i>
+        </button>
+
+        <!-- Collapsible navbar content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home"><i class="fas fa-home me-1"></i>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services"><i class="fas fa-cogs me-1"></i>Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#clients"><i class="fas fa-info-circle me-1"></i>Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects"><i class="fas fa-project-diagram me-1"></i>Projects</a>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">
+            <i class="fas fa-quote-right me-2"></i>Get a Quote
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <!-- home -->
+    <section class="hero-section d-flex align-items-center justify-content-center position-relative" id="home">
+      <!-- Floating Orbs -->
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="floating-orb orb-3"></div>
+
+      <!-- Particles -->
+      <div class="particles" id="particles"></div>
+
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <!-- Left Content -->
+          <div class="col-lg-6">
+            <div class="hero-text glass-card p-5 rounded-4" data-aos="fade-up" data-aos-duration="1000">
+              <h1 class="display-3 fw-bold mb-4">
+                Scalable IT Solutions<br />
+                <span class="gradient-text">for Modern Businesses</span>
+              </h1>
+              <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                Web development, cloud architecture, and digital acceleration—delivered with precision and innovation.
+              </p>
+              <div data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="btn btn-lg btn-glow">
+                  <i class="fas fa-rocket me-2"></i>Get Free Consultation
+                </a>
+              </div>
+
+              <!-- Trust Indicators -->
+              <div class="d-flex align-items-center mt-4 pt-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="me-4">
+                  <div class="d-flex text-warning mb-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                  </div>
+                  <small class="text-light opacity-75">4.5 from 50+ clients</small>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center">
+                    <i class="fas fa-shield-alt text-success me-2"></i>
+                    <small class="text-light opacity-75">ISO 27001 Certified</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div class="hero-img-wrapper position-relative">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Modern IT Solutions" class="hero-img img-fluid rounded-4">
+              <div class="floating-shape"></div>
+
+              <!-- Tech Stack Icons -->
+              <div class="position-absolute" style="top: 20%; left: -10%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="600">
+                  <i class="fab fa-react text-info" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+              <div class="position-absolute" style="bottom: 30%; right: -10%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="600">
+                  <i class="fab fa-aws text-warning" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+              <div class="position-absolute" style="top: 60%; left: -5%; z-index: 10;">
+                <div class="glass-card p-3 rounded-circle" data-aos="zoom-in" data-aos-delay="600">
+                  <i class="fab fa-docker text-primary" style="font-size: 1.5rem;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stats - Desktop Only -->
+      <div class="tech-stats-home flex-none d-md-flex flex-md-column position-absolute object-fit-contain">
+        <div class="stat-card-home" data-aos="fade-left" data-aos-delay="200" data-aos-duration="200">
+          <div class="stat-number-home" data-count="100">0+</div>
+          <div class="stat-label-home">Projects</div>
+        </div>
+        <div class="stat-card-home" data-aos="fade-left" data-aos-delay="100" data-aos-duration="200">
+          <div class="stat-number-home" data-count="99">0</div>
+          <div class="stat-label-home">% Uptime</div>
+        </div>
+        <div class="stat-card-home" data-aos="fade-left" data-aos-delay="100">
+          <div class="stat-number-home" data-count="24">0</div>
+          <div class="stat-label-home">/ 7 Support</div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="scroll-down" data-aos="fade-up" data-aos-delay="1600">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+      <div class="service-wave d-none d-md-flex" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"></div>
+      <!-- <div class="service-wave2" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"></div> -->
+      <!-- Floating Background Shapes -->
+      <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+
+      <div class="container">
+        <!-- <div class="service-wave" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"></div>
+      <div class="service-wave2" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"></div> -->
+        <!-- Section Header -->
+        <div class="section-header u-flex-center u-mb-2" data-aos="fade-up" data-aos-delay="200"
+          data-aos-duration="600">
+          <h2 class="section-title u-gradient-text">Our Core Services</h2>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+          <!-- Service 1: Web Development -->
+          <div class="service-card u-glass u-shadow" data-service="web">
+            <div class="service-icon">
+              <i class="bi bi-window-stack"></i>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">Responsive and scalable websites built with modern tech stacks, optimized for
+              performance and user experience.</p>
+          </div>
+
+          <!-- Service 3: Mobile App Development -->
+          <div class="service-card" data-service="mobile">
+            <div class="service-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <h3 class="service-title">Mobile App Development</h3>
+            <p class="service-description">Cross-platform mobile applications focused on exceptional performance,
+              intuitive UX, and seamless integration.</p>
+          </div>
+
+          <!-- Service 4: IT Consulting -->
+          <div class="service-card" data-service="consulting">
+            <div class="service-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h3 class="service-title">IT Consulting</h3>
+            <p class="service-description">Strategic advisory services to upgrade, scale, and secure your systems with
+              data-driven insights and best practices.</p>
+          </div>
+
+          <!-- Service 5:Game Development -->
+          <div class="service-card" data-service="ai">
+            <div class="service-icon">
+              <i class="bi bi-controller"></i>
+            </div>
+            <h3 class="service-title">Game Development</h3>
+            <p class="service-description">Designing immersive and interactive gaming experiences across mobile and web
+              platforms.</p>
+          </div>
+
+          <!-- Service 6: Software Development -->
+          <div class="service-card" data-service="security">
+            <div class="service-icon">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h3 class="service-title">Software Development</h3>
+            <p class="service-description">Custom software solutions to automate, optimize, and transform your business
+              processes.</p>
+          </div>
+
+
+          <!-- Service 2: Cloud Deployment -->
+          <div class="service-card" data-service="cloud">
+            <div class="service-icon">
+              <i class="bi bi-cloud-check"></i>
+            </div>
+            <h3 class="service-title">Cloud Deployment</h3>
+            <p class="service-description">Deploy secure, fast, and cost-efficient cloud infrastructure with automated
+              scaling and monitoring.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+    <!-- our latest client -->
+    <section class="py-5" id="clients">
+      <div class="client-wave d-none d-md-flex" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"></div>
+
+      <!-- Floating Elements -->
+      <div class="floating-element floating-element-1"></div>
+      <div class="floating-element floating-element-2"></div>
+      <!-- <div class="floating-element floating-element-3"></div> -->
+      <div class="floating-element floating-element-4"></div>
+
+      <!-- Testimonial Quotes -->
+      <div class="testimonial-quote quote-1">"</div>
+      <div class="testimonial-quote quote-2">"</div>
+
+      <div class="container clients-container">
+
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+          <h2 class="client-project">Trusted by Industry Leaders</h2>
+          <p class="section-subtitle">Partnering with innovative companies to deliver exceptional IT solutions</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <div class="logo-slider" id="logoSlider">
+
+            <div class="logo-track" id="logoTrack">
+              <!-- First set of logos -->
+              <img src="./assets/logo02.png" alt="Tech Corp" style="animation-delay: 0.1s">
+              <img src="./assets/logo03.png" alt="Innovate Inc" style="animation-delay: 0.2s">
+              <img src="./assets/logo04.png" alt="Digital Solutions" style="animation-delay: 0.3s">
+              <img src="./assets/logo05.png" alt="Cloud Systems" style="animation-delay: 0.4s">
+              <img src="./assets/logo06.png" alt="Data Dynamics" style="animation-delay: 0.5s">
+              <img src="./assets/logo07.png" alt="Smart Enterprise" style="animation-delay: 0.6s">
+              <img src="./assets/logo08.png" alt="Future Tech" style="animation-delay: 0.7s">
+
+              <!-- Duplicate set for smooth infinite scroll -->
+              <img src="./assets/logo02.png" alt="Tech Corp" style="animation-delay: 0.9s">
+              <img src="./assets/logo03.png" alt="Innovate Inc" style="animation-delay: 1.0s">
+              <img src="./assets/logo04.png" alt="Digital Solutions" style="animation-delay: 1.1s">
+              <img src="./assets/logo05.png" alt="Cloud Systems" style="animation-delay: 1.2s">
+              <img src="./assets/logo06.png" alt="Data Dynamics" style="animation-delay: 1.3">
+              <img src="./assets/logo07.png" alt="Smart Enterprise" style="animation-delay: 1.4s">
+              <img src="./assets/logo08.png" alt="Future Tech" style="animation-delay: 1.5s">
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section" data-aos="fade-up" data-aos-delay="150">
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="stat-item" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="400">
+                <div class="stat-number" data-count="90">0+</div>
+                <div class="stat-label">Happy Clients</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="stat-item" data-aos="zoom-in" data-aos-delay="250" data-aos-duration="200">
+                <div class="stat-number" data-count="100">0+</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="stat-item" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="200">
+                <div class="stat-number" data-count="30">0+</div>
+                <div class="stat-label">Team Members</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="stat-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="5">
+                <div class="stat-number" data-count="7">0+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our Projects -->
+
+    <section class="py-5 mt-4 position-relative" id="projects">
+      <div class="project-wave d-none d-md-flex" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"></div>
+
+      <div class="container">
+        <div class="text-center mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
+          <h2 class="client-project">See Our Work. <br>Imagine Yours.</h2>
+        </div>
+
+
+
+        <div class="row" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/thumb1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/thumb3.jpg" />
+              </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO SECTION -->
+
+    <section class="ceo-section">
+      <!-- Floating Background Elements -->
+      <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+      </div>
+
+      <div class="container">
+        <div class="ceo-container">
+          <div class="row g-0">
+            <!-- Photo Section -->
+            <div class="col-lg-5">
+              <div class="photo-section">
+                <div class="photo-container">
+                  <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+                    alt="CEO Rahul yadav" class="photo-main">
+                  <div class="photo-decoration"></div>
+                  <div class="photo-decoration"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="col-lg-7">
+              <div class="content-section">
+                <!-- Quote Decoration -->
+                <div class="quote-decoration">"</div>
+
+                <!-- Section Badge -->
+                <div class="section-badge">
+                  <i class="bi bi-chat-heart"></i>
+                  Leadership Message
+                </div>
+
+                <!-- Welcome Title -->
+                <h1 class="welcome-title">
+                  Welcome to the Future of
+                  <span class="highlight">Innovation</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <h4 class="welcome-subtitle">A Personal Message from Our CEO</h4>
+
+                <!-- Welcome Message -->
+                <p class="welcome-message">
+                  At our core, we believe technology should empower, not complicate. Every solution we craft is driven
+                  by a passion for excellence and a commitment to transforming how businesses operate in the digital
+                  age. Our journey began with a simple vision: to bridge the gap between cutting-edge technology and
+                  real-world business needs.
+                </p>
+
+
+                <!-- CEO Info -->
+                <div class="ceo-info pt-0 mt-0">
+                  <div class="ceo-avatar">MFS</div>
+                  <div class="ceo-details">
+                    <h4>Rahul Yadav</h4>
+                    <p>CEO & Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Ready to transform your business with cutting-edge technology? Let's discuss your project and bring your
+            vision to life.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Contact Form -->
+          <div class="col-lg-12" data-aos="fade-right" data-aos-delay="200">
+            <div class="contact-card">
+              <h3 class="mb-4" style="color: var(--text-dark); font-weight: 600;">
+                <i class="fas fa-paper-plane me-2" style="color: var(--primary-color);"></i>
+                Send us a Message
+              </h3>
+
+              <div class="form-status success" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <span>Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+              </div>
+
+              <div class="form-status error" id="errorMessage">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Sorry, there was an error sending your message. Please try again.</span>
+              </div>
+
+              <form class="contact-form" id="contactForm">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i class="fas fa-user me-1"></i>Full Name *
+                      </label>
+                      <input type="text" class="form-control" name="name" placeholder="John Doe" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i class="fas fa-envelope me-1"></i>Email Address *
+                      </label>
+                      <input type="email" class="form-control" name="email" placeholder="john@example.com" required>
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i class="fas fa-phone me-1"></i>Phone Number
+                      </label>
+                      <input type="tel" class="form-control" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i class="fas fa-building me-1"></i>Company Name
+                      </label>
+                      <input type="text" class="form-control" name="company" placeholder="Your Company">
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 form-group">
+                    <label class="form-label">
+                      <i class="fas fa-cogs me-1"></i>Service Interested In
+                    </label>
+                    <select class="form-select" name="service">
+                      <option value="">Select a service</option>
+                      <option value="web-development">Web Development</option>
+                      <option value="mobile-apps">Mobile App Development</option>
+                      <option value="game-Development">Game Development</option>
+                      <option value="software-development">Software Development</option>
+                      <option value="cloud-solutions">Cloud Solutions</option>
+                      <option value="tech-support">Technical Support</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label class="form-label">
+                      <i class="fa-solid fa-indian-rupee-sign me-1"></i>Project Budget
+                    </label>
+                    <select class="form-select" name="budget">
+                      <option value="">Select budget range</option>
+                      <option value="under-5k">Under ₹15,000</option>
+                      <option value="5k-10k">₹15,000 - ₹25,000</option>
+                      <option value="10k-25k">₹25,000 - ₹35,000</option>
+                      <option value="25k-50k">₹35,000 - ₹50,000</option>
+                      <option value="50k-plus">₹50,000+</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label class="form-label">
+                      <i class="fas fa-comment-dots me-1"></i>Message *
+                    </label>
+                    <textarea class="form-control" name="message"
+                      placeholder="Tell us about your project requirements, timeline, and any specific needs..."
+                      required></textarea>
+                  </div>
+
+                  <div class="col-md-6 align-self-center">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                      <i class="fas fa-paper-plane me-2"></i>
+                      <span>Send Message</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row mt-5 row-gap-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-md-4 text-center">
+            <div class="contact-card">
+              <div class="contact-info-icon mx-auto mb-3">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h5 class="contact-info-title">Business Hours</h5>
+              <p class="contact-info-text">
+                Mon - Fri: 9:00 AM - 6:00 PM<br>
+                Sat: 10:00 AM - 4:00 PM<br>
+                Sun: Closed
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="contact-card">
+              <div class="contact-info-icon mx-auto mb-3">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h5 class="contact-info-title">24/7 Support</h5>
+              <p class="contact-info-text">
+                Emergency technical support<br>
+                available around the clock<br>
+                for premium clients
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="contact-card">
+              <div class="contact-info-icon mx-auto mb-3">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h5 class="contact-info-title">Quick Response</h5>
+              <p class="contact-info-text">
+                We respond to all inquiries<br>
+                within 2 hours during<br>
+                business hours
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Contact Button -->
+    <a href="#contact" class="floating-contact" title="Contact Us">
+      <i class="fas fa-comments"></i>
+    </a>
+
+
+    
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-wave"></div>
+      <div class="floating-particles" id="particles"></div>
+
+      <div class="footer-content">
+        <div class="container">
+          <div class="row">
+            <!-- Company Info -->
+            <div class="col-lg-8 col-md-6">
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <div class="footer-brand">
+                    <i class="fas fa-code me-2"></i>TechNovate
+                  </div>
+                  <p class="footer-description">
+                    Transforming businesses through innovative technology solutions. We deliver cutting-edge IT services
+                    that drive growth and digital transformation.
+                  </p>
+                  <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/meta-future-services-59b101370/" target="_blank"
+                      class="social-icon" title="LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/metafutureservices_official/" target="_blank" class="social-icon"
+                      title="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Twitter">
+                      <i class="bi bi-twitter-x"></i>
+                    </a>
+
+
+                    <!-- <a href="#" class="social-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a> -->
+                  </div>
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-6 mt-5">
+                  <h5 class="footer-section-title">Quick Links</h5>
+                  <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-6 mt-5">
+                  <h5 class="footer-section-title">Services</h5>
+                  <ul class="footer-links">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">App Development</a></li>
+                    <li><a href="#">Game Development</a></li>
+                    <li><a href="#">IT Consulting</a></li>
+                    <li><a href="#">Tech Support</a></li>
+                  </ul>
+                </div>
+
+              </div>
+              <div class="row mt-2 pt-3">
+                <div class="col-12 contact-info pt-4 ps-4">
+                  <div class="row">
+                    <div class="col-lg-6 col-12">
+                      <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                          <strong>Phone:</strong><br>
+                          +91 8957466548 <br>
+                          +91 9554904444
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                      <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                          <strong>Email:</strong><br>
+                          metafutureservices666@gmail.com
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-4 col-md-6 mt-5">
+              <div class="row">
+                <div class="col-12 h-25"></div>
+                <h5 class="footer-section-title">Address:</h5>
+                <p class="address-footer">Rishi Udyaan Faizabad Road, Canal Road, Lucknow 226028</p>
+              </div>
+              <div class="col-12 h-75">
+                <div class="map-info">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14233.672807361172!2d81.06064292372182!3d26.89021973925534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be10040a0f03f%3A0xc22ce71125b30a45!2sMera%20Future%20service%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1749801095260!5m2!1sen!2sin"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-content">
+        <div class="copyright">
+          <p>&copy; <span id="year"></span> MFS. All rights reserved. Built with
+            <i class="fas fa-heart" style="color: #ff6b6b;"></i> by MFS Team
+          </p>
+        </div>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+
+
+  </div>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- GSAP CDN -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    document.querySelector("#year").textContent = new Date().getFullYear();
+
+  </script>
+  <script src="main.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
