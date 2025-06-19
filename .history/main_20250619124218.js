@@ -157,7 +157,7 @@ function createParticle() {
     document.getElementById('particles').appendChild(particle);
 
     setTimeout(() => {
-        particle.remove();
+        // particle.remove();
     }, 20000);
 }
 

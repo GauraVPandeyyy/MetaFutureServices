@@ -45,8 +45,6 @@ window.addEventListener('scroll', function () {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        console.log(sectionTop);
-        console.log(window.pageYOffset);
         const sectionHeight = section.clientHeight;
         if (window.pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
@@ -105,8 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
 // Counter Animation
 function animateCounters() {
     const counters = document.querySelectorAll('[data-count]');
@@ -129,8 +125,6 @@ function animateCounters() {
     });
 }
 
-
-
 // Start counter animation when in view
 const observer1 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -147,22 +141,22 @@ if (statsSection) {
 }
 
 // Particle System
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.animationDelay = Math.random() * 15 + 's';
-    particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+// function createParticle() {
+//     const particle = document.createElement('div');
+//     particle.className = 'particle';
+//     particle.style.left = Math.random() * 100 + '%';
+//     particle.style.animationDelay = Math.random() * 15 + 's';
+//     particle.style.animationDuration = (15 + Math.random() * 10) + 's';
 
-    document.getElementById('particles').appendChild(particle);
+//     document.getElementById('particles').appendChild(particle);
 
-    setTimeout(() => {
-        particle.remove();
-    }, 20000);
-}
+//     setTimeout(() => {
+//         particle.remove();
+//     }, 25000);
+// }
 
 // Create particles periodically
-setInterval(createParticle, 2000);
+setInterval(createParticle, 3000);
 
 
 
@@ -170,18 +164,18 @@ setInterval(createParticle, 2000);
 // Optimize performance
 
 
-let ticking = false;
+// let ticking = false;
 
-function updateAnimations() {
-    ticking = false;
-}
+// function updateAnimations() {
+//     ticking = false;
+// }
 
-function requestTick() {
-    if (!ticking) {
-        requestAnimationFrame(updateAnimations);
-        ticking = true;
-    }
-}
+// function requestTick() {
+//     if (!ticking) {
+//         requestAnimationFrame(updateAnimations);
+//         ticking = true;
+//     }
+// }
 
 // Intersection observer2 for performance
 const observerOptions1 = {

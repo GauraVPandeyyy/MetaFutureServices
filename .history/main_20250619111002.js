@@ -45,8 +45,6 @@ window.addEventListener('scroll', function () {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        console.log(sectionTop);
-        console.log(window.pageYOffset);
         const sectionHeight = section.clientHeight;
         if (window.pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
@@ -107,6 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
 // Counter Animation
 function animateCounters() {
     const counters = document.querySelectorAll('[data-count]');
@@ -128,8 +131,6 @@ function animateCounters() {
         }, 16);
     });
 }
-
-
 
 // Start counter animation when in view
 const observer1 = new IntersectionObserver((entries) => {
@@ -199,9 +200,9 @@ const observer2 = new IntersectionObserver(function (entries) {
 }, observerOptions1);
 
 // Observe all service cards
-document.querySelectorAll('.service-card').forEach(card => {
-    observer2.observe(card);
-});
+// document.querySelectorAll('.service-card').forEach(card => {
+//     observer2.observe(card);
+// });
 
 
 

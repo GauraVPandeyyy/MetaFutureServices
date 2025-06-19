@@ -107,6 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
 // Counter Animation
 function animateCounters() {
     const counters = document.querySelectorAll('[data-count]');

@@ -46,7 +46,6 @@ window.addEventListener('scroll', function () {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         console.log(sectionTop);
-        console.log(window.pageYOffset);
         const sectionHeight = section.clientHeight;
         if (window.pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
@@ -102,6 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
    
 });
+
+
+
+
+
 
 
 

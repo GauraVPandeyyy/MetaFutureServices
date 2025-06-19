@@ -332,15 +332,6 @@ if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
 
 
 
-
-
-
-
-
-
-
-
-
 // CEO JS
 
 // Register GSAP ScrollTrigger

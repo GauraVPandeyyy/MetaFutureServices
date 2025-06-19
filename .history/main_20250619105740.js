@@ -45,8 +45,6 @@ window.addEventListener('scroll', function () {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        console.log(sectionTop);
-        console.log(window.pageYOffset);
         const sectionHeight = section.clientHeight;
         if (window.pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
@@ -105,8 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
 // Counter Animation
 function animateCounters() {
     const counters = document.querySelectorAll('[data-count]');
@@ -128,8 +124,6 @@ function animateCounters() {
         }, 16);
     });
 }
-
-
 
 // Start counter animation when in view
 const observer1 = new IntersectionObserver((entries) => {
@@ -158,11 +152,11 @@ function createParticle() {
 
     setTimeout(() => {
         particle.remove();
-    }, 20000);
+    }, 25000);
 }
 
 // Create particles periodically
-setInterval(createParticle, 2000);
+setInterval(createParticle, 3000);
 
 
 

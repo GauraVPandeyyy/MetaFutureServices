@@ -158,7 +158,6 @@
     /* service */
     .services-section {
         /* padding: 10px 0; */
-        margin-top: 0px;
     }
 
     .section-title {
@@ -261,10 +260,6 @@
     }
 
     /* contact */
-
-    .contact-section{
-        margin-top: -100px;
-    }
     .section-title {
         font-size: 2.5rem;
         color: red !important;

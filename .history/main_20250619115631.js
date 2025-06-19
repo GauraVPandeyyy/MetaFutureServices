@@ -45,8 +45,6 @@ window.addEventListener('scroll', function () {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        console.log(sectionTop);
-        console.log(window.pageYOffset);
         const sectionHeight = section.clientHeight;
         if (window.pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
@@ -107,6 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
 // Counter Animation
 function animateCounters() {
     const counters = document.querySelectorAll('[data-count]');
@@ -129,7 +132,35 @@ function animateCounters() {
     });
 }
 
+document.querySelectorAll('.service-card').forEach(card => {
+    let isActive = false;
 
+    // Intersection Observer for this card
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                isActive = true;
+            } else {
+                isActive = false;
+                card.style.transform = ''; // Reset
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(card);
+
+    // Mousemove parallax
+    card.addEventListener('mousemove', e => {
+        if (!isActive) return;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        card.style.transform = `rotateY(${x / 20}deg) rotateX(${-y / 20}deg) scale(1.03)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+    });
 
 // Start counter animation when in view
 const observer1 = new IntersectionObserver((entries) => {

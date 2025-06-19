@@ -869,7 +869,7 @@ body {
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     box-shadow: var(--shadow-glass);
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateY(50px);
 }
 

@@ -157,7 +157,7 @@ function createParticle() {
     document.getElementById('particles').appendChild(particle);
 
     setTimeout(() => {
-        particle.remove();
+        // particle.remove();
     }, 20000);
 }
 
@@ -207,10 +207,10 @@ document.querySelectorAll('.service-card').forEach(card => {
 
 
 
-// document.querySelectorAll('.service-card').forEach(card => {
-//     card.addEventListener('mouseenter', () => card.classList.add('u-shadow'));
-//     card.addEventListener('mouseleave', () => card.classList.remove('u-shadow'));
-// });
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', () => card.classList.add('u-shadow'));
+    card.addEventListener('mouseleave', () => card.classList.remove('u-shadow'));
+});
 
 // CLIENT SCROLL JS
 
@@ -239,7 +239,7 @@ function animateCounter(element, target, duration = 2000) {
         } else {
             element.textContent = Math.floor(start);
         }
-    }, 3);
+    }, 16);
 }
 
 // Initialize counters when they come into view
