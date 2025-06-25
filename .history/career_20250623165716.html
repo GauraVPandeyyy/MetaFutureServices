@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers @ MFS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #284283;
+            --primary-gradient: linear-gradient(135deg, #284283 0%, #3a5998 50%, #4c70b3 100%);
+            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --shadow-soft: 0 8px 32px rgba(40, 66, 131, 0.1);
+            --shadow-strong: 0 20px 60px rgba(40, 66, 131, 0.15);
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --text-light: #718096;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-blue);
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(120, 180, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 120, 180, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 255, 180, 0.1) 0%, transparent 50%);
+            min-height: 100vh;
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Header */
+        .careers-header {
+            /* background: var(--glass-bg); */
+            background: rgba(255, 255, 255, 0.523) !important;
+
+            backdrop-filter: blur(20px);
+            border-bottom: 5px solid var(--glass-border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 0 0 24px 24px !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-light);
+        }
+
+        .brand-logo {
+            /* font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white; */
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+        }
+
+        .brand-logo img {
+            border-radius: 10px;
+        }
+
+        /* .brand-logo i {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        } */
+
+
+        /* Hero Section */
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .main-container {
+            background: white;
+            margin: 2rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-strong);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Form Container */
+        .form-container {
+            padding: 3rem;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Form Groups */
+        .form-group {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-group::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .form-group:hover::before,
+        .form-group:focus-within::before {
+            transform: scaleX(1);
+        }
+
+        .form-group:hover {
+            border-color: rgba(40, 66, 131, 0.1);
+            box-shadow: var(--shadow-soft);
+            transform: translateY(-2px);
+        }
+
+        .group-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .group-title i {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Form Controls */
+        .form-control,
+        .form-select {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 0.875rem 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 4px rgba(40, 66, 131, 0.1);
+            outline: none;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .required {
+            color: #e53e3e;
+        }
+
+        /* File Upload */
+        .file-upload {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload input[type=file] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-upload-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            border: 2px dashed #cbd5e0;
+            border-radius: 12px;
+            background: white;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .file-upload-btn:hover {
+            border-color: var(--primary-blue);
+            background: rgba(40, 66, 131, 0.05);
+            color: var(--primary-blue);
+        }
+
+        .file-name {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Checkbox Styling */
+        .form-check {
+            margin-bottom: 1rem;
+        }
+
+        .form-check-input {
+            width: 1.2rem;
+            height: 1.2rem;
+            border: 2px solid #cbd5e0;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .form-check-label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        /* Submit Button */
+        .submit-section {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .btn-submit {
+            background: var(--primary-gradient);
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 200px;
+        }
+
+        .btn-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-submit:hover::before {
+            left: 100%;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(40, 66, 131, 0.3);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        /* Loading State */
+        .btn-submit.loading {
+            pointer-events: none;
+        }
+
+        .spinner {
+            display: none;
+        }
+
+        .loading .spinner {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 0.5rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: var(--success-gradient);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Error Styles */
+        .error {
+            border-color: #e53e3e !important;
+            box-shadow: 0 0 0 4px rgba(229, 62, 62, 0.1) !important;
+        }
+
+        .error-message {
+            color: #e53e3e;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                margin: 1rem;
+                border-radius: 16px;
+            }
+
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .form-group {
+                padding: 1.5rem;
+            }
+
+            .group-title {
+                font-size: 1.1rem;
+            }
+
+            .btn-submit {
+                width: 100%;
+                padding: 1rem 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 2rem 0;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .form-container {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stagger animation delays */
+        .fade-in:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .fade-in:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .fade-in:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .fade-in:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .fade-in:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+
+        .card {
+            background: var(--accent-gradient);
+            
+        }
+
+        .card img {
+            padding: 5px 10px;
+            /* background: var(--success-gradient); */
+            background: linear-gradient(135deg, #01ffea, #);;
+            border-radius: 8px;
+            width: 50px;
+        }
+        .card h5{
+            margin: 25px 0 10px;
+        }
+
+        .card a{
+            text-decoration: none;
+            color:black;
+            padding: 5px 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="careers-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <a href="#" class="brand-logo">
+                        <!-- <i class="fas fa-code"></i> -->
+                        <img src="./assets/mfs-logo.jpg" height="60" alt="">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="./index.html" class="text-blue text-decoration-none">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h1 class="hero-title">Join Our Team</h1>
+                <p class="hero-subtitle">
+                    Shape the future of technology with us. We're looking for passionate individuals
+                    who want to make a difference in the IT solutions landscape.
+                </p>
+            </div>
+
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Team Members</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">CYears Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-section container">
+        <div class="card-section-header text-center">
+            <h1>
+                Open Positions
+            </h1>
+            <p>Discover exciting internship opportunities across different domains and kickstart your career in
+                technology.</p>
+        </div>
+        <div class="card-section-content">
+            <div class="row">
+                <div class="col-6 card p-3 text-white">
+                    <img src="./assets/code.png" alt="">
+                    <h5 class="fw-bold">Frontend-developer</h5>
+                    <p class="fw-light">Join our frontend team to build cutting-edge user interfaces using modern web
+                        technologies.</p>
+                    <a href="#form">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Main Container -->
+    <div class="main-container" data-aos="zoom-in">
+        <div class="form-container" id="#form">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Career Application</h2>
+                <p class="section-subtitle">
+                    Tell us about yourself and let's explore opportunities together
+                </p>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle me-2"></i>
+                Application submitted successfully! We'll get back to you soon.
+            </div>
+
+            <!-- Application Form -->
+            <form id="careerForm" novalidate>
+                <!-- Personal Information -->
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-user"></i>
+                        Personal Information
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">First Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="firstName" required>
+                            <div class="error-message">Please enter your first name</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Last Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="lastName" required>
+                            <div class="error-message">Please enter your last name</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email Address <span class="required">*</span></label>
+                            <input type="email" class="form-control" name="email" required>
+                            <div class="error-message">Please enter a valid email address</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Phone Number <span class="required">*</span></label>
+                            <input type="tel" class="form-control" name="phone" required>
+                            <div class="error-message">Please enter your phone number</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" name="address" placeholder="Street address">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control" name="city">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Information -->
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-briefcase"></i>
+                        Professional Information
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Position Applied For <span class="required">*</span></label>
+                            <select class="form-select" name="position" required>
+                                <option value="">Select a position</option>
+                                <option value="frontend-developer">Frontend Developer</option>
+                                <option value="backend-developer">Backend Developer</option>
+                                <option value="fullstack-developer">Full Stack Developer</option>
+
+                                <option value="ui-ux-designer">UI/UX Designer</option>
+                                <option value="project-manager">Project Manager</option>
+                                <option value="qa-engineer">QA Engineer</option>
+                                <option value="cybersecurity-specialist">Cybersecurity Specialist</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message">Please select a position</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Experience Level <span class="required">*</span></label>
+                            <select class="form-select" name="experience" required>
+                                <option value="">Select experience level</option>
+                                <option value="entry-level">Entry Level (0-2 years)</option>
+                                <option value="mid-level">Mid Level (2-5 years)</option>
+                                <option value="senior-level">Senior Level (5-8 years)</option>
+                                <option value="lead-level">Lead Level (8+ years)</option>
+                            </select>
+                            <div class="error-message">Please select your experience level</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Current/Previous Company</label>
+                            <input type="text" class="form-control" name="currentCompany">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Expected Salary Range</label>
+                            <select class="form-select" name="salaryRange">
+                                <option value="">Select salary range</option>
+                                <option value="30k-50k">₹30,000 - ₹50,000</option>
+                                <option value="50k-70k">₹50,000 - ₹70,000</option>
+                                <option value="70k-90k">₹70,000 - ₹90,000</option>
+                                <option value="90k-120k">₹90,000 - ₹120,000</option>
+                                <option value="120k+">₹120,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Technical Skills <span class="required">*</span></label>
+                        <textarea class="form-control" name="skills" rows="3"
+                            placeholder="List your key technical skills, programming languages, frameworks, tools, etc."
+                            required></textarea>
+                        <div class="error-message">Please list your technical skills</div>
+                    </div>
+                </div>
+
+                <!-- Professional Links -->
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-link"></i>
+                        Professional Links
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">LinkedIn Profile</label>
+                            <input type="url" class="form-control" name="linkedin"
+                                placeholder="https://linkedin.com/in/yourprofile">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">GitHub Profile</label>
+                            <input type="url" class="form-control" name="github"
+                                placeholder="https://github.com/yourusername">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Portfolio Website</label>
+                            <input type="url" class="form-control" name="portfolio"
+                                placeholder="https://yourportfolio.com">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Other Professional Link</label>
+                            <input type="url" class="form-control" name="otherLink" placeholder="https://example.com">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documents -->
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-file-alt"></i>
+                        Documents
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Resume/CV <span class="required">*</span></label>
+                            <div class="file-upload">
+                                <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+                                <div class="file-upload-btn">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload Resume</span>
+                                </div>
+                                <div class="file-name"></div>
+                            </div>
+                            <div class="error-message">Please upload your resume</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Cover Letter</label>
+                            <div class="file-upload">
+                                <input type="file" name="coverLetter" accept=".pdf,.doc,.docx">
+                                <div class="file-upload-btn">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload Cover Letter</span>
+                                </div>
+                                <div class="file-name"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-comment-alt"></i>
+                        Additional Information
+                    </h3>
+                    <div class="mb-3">
+                        <label class="form-label">Why do you want to join our team?</label>
+                        <textarea class="form-control" name="motivation" rows="4"
+                            placeholder="Tell us what motivates you to work with us and how you can contribute to our team..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Availability</label>
+                        <select class="form-select" name="availability">
+                            <option value="">Select availability</option>
+                            <option value="immediate">Immediate</option>
+                            <option value="2-weeks">2 weeks notice</option>
+                            <option value="1-month">1 month notice</option>
+                            <option value="2-months">2 months notice</option>
+                            <option value="negotiable">Negotiable</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="remoteWork" id="remoteWork">
+                                <label class="form-check-label" for="remoteWork">
+                                    Open to remote work
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="relocation" id="relocation">
+                                <label class="form-check-label" for="relocation">
+                                    Willing to relocate
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="newsletter" id="newsletter"
+                                    checked>
+                                <label class="form-check-label" for="newsletter">
+                                    Subscribe to our newsletter
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="terms" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to the <a href="#" class="text-decoration-none">terms and conditions</a>
+                                    <span class="required">*</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Submit Section -->
+                <div class="submit-section fade-in">
+                    <button type="submit" class="btn-submit">
+                        <span class="spinner"></span>
+                        <span class="btn-text">Submit Application</span>
+                    </button>
+                    <p class="mt-3 text-muted">
+                        <i class="fas fa-shield-alt me-1"></i>
+                        Your information is secure and will only be used for recruitment purposes
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 600,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+
+        // Create animated particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // File upload handling
+        function setupFileUploads() {
+            const fileInputs = document.querySelectorAll('input[type="file"]');
+
+            fileInputs.forEach(input => {
+                input.addEventListener('change', function () {
+                    const fileName = this.files[0] ? this.files[0].name : '';
+                    const fileNameDiv = this.parentNode.querySelector('.file-name');
+                    const uploadBtn = this.parentNode.querySelector('.file-upload-btn span');
+
+                    if (fileName) {
+                        fileNameDiv.textContent = `Selected: ${fileName}`;
+                        fileNameDiv.style.display = 'block';
+                        uploadBtn.textContent = 'Change File';
+                    } else {
+                        fileNameDiv.style.display = 'none';
+                        uploadBtn.textContent = input.name === 'resume' ? 'Upload Resume' : 'Upload Cover Letter';
+                    }
+                });
+            });
+        }
+
+        // Form validation
+        function validateForm() {
+            const form = document.getElementById('careerForm');
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+
+            // Reset previous errors
+            document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+            document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('error');
+                    const errorMsg = field.parentNode.querySelector('.error-message');
+                    if (errorMsg) errorMsg.style.display = 'block';
+                    isValid = false;
+                } else if (field.type === 'email' && !isValidEmail(field.value)) {
+                    field.classList.add('error');
+                    const errorMsg = field.parentNode.querySelector('.error-message');
+                    if (errorMsg) {
+                        errorMsg.textContent = 'Please enter a valid email address';
+                        errorMsg.style.display = 'block';
+                    }
+                    isValid = false;
+                }
+            });
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Form submission
+        function setupFormSubmission() {
+            const form = document.getElementById('careerForm');
+            const submitBtn = document.querySelector('.btn-submit');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const successMessage = document.getElementById('successMessage');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (!validateForm()) {
+                    // Scroll to first error
+                    const firstError = document.querySelector('.error');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.classList.add('loading');
+                btnText.textContent = 'Submitting...';
+
+                // Simulate form submission
+                setTimeout(() => {
+                    // Hide loading state
+                    submitBtn.classList.remove('loading');
+                    btnText.textContent = 'Submit Application';
+
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+
+                    // Reset form after a delay
+                    setTimeout(() => {
+                        form.reset();
+                        document.querySelectorAll('.file-name').forEach(el => {
+                            el.style.display = 'none';
+                        });
+                        document.querySelectorAll('.file-upload-btn span').forEach((el, index) => {
+                            el.textContent = index === 0 ? 'Upload Resume' : 'Upload Cover Letter';
+                        });
+                        successMessage.style.display = 'none';
+                    }, 3000);
+
+                }, 2000);
+            });
+        }
+
+        // Real-time validation
+        function setupRealTimeValidation() {
+            const inputs = document.querySelectorAll('input, select, textarea');
+
+            inputs.forEach(input => {
+                input.addEventListener('blur', function () {
+                    if (this.hasAttribute('required')) {
+                        if (!this.value.trim()) {
+                            this.classList.add('error');
+                            const errorMsg = this.parentNode.querySelector('.error-message');
+                            if (errorMsg) errorMsg.style.display = 'block';
+                        } else {
+                            this.classList.remove('error');
+                            const errorMsg = this.parentNode.querySelector('.error-message');
+                            if (errorMsg) errorMsg.style.display = 'none';
+
+                            // Special validation for email
+                            if (this.type === 'email' && !isValidEmail(this.value)) {
+                                this.classList.add('error');
+                                if (errorMsg) {
+                                    errorMsg.textContent = 'Please enter a valid email address';
+                                    errorMsg.style.display = 'block';
+                                }
+                            }
+                        }
+                    }
+                });
+
+                input.addEventListener('input', function () {
+                    if (this.classList.contains('error') && this.value.trim()) {
+                        this.classList.remove('error');
+                        const errorMsg = this.parentNode.querySelector('.error-message');
+                        if (errorMsg) errorMsg.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // Smooth scroll for navigation
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Enhanced form interactions
+        function setupFormEnhancements() {
+            // Add focus effects to form groups
+            const formControls = document.querySelectorAll('.form-control, .form-select');
+
+            formControls.forEach(control => {
+                control.addEventListener('focus', function () {
+                    this.closest('.form-group').style.transform = 'translateY(-1px)';
+                });
+
+                control.addEventListener('blur', function () {
+                    this.closest('.form-group').style.transform = 'translateY(0)';
+                });
+            });
+
+            // Enhanced checkbox interactions
+            const checkboxes = document.querySelectorAll('.form-check-input');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function () {
+                    if (this.checked) {
+                        this.parentNode.style.transform = 'scale(1.02)';
+                        setTimeout(() => {
+                            this.parentNode.style.transform = 'scale(1)';
+                        }, 150);
+                    }
+                });
+            });
+        }
+
+        // Progress indicator
+        function setupProgressIndicator() {
+            const form = document.getElementById('careerForm');
+            const formGroups = form.querySelectorAll('.form-group');
+            let completedSections = 0;
+
+            // Create progress bar
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: linear-gradient(90deg, #667eea, #764ba2);
+                z-index: 9999;
+                transition: width 0.3s ease;
+            `;
+            document.body.appendChild(progressBar);
+
+            function updateProgress() {
+                const totalFields = form.querySelectorAll('input[required], select[required], textarea[required]');
+                const completedFields = Array.from(totalFields).filter(field => {
+                    if (field.type === 'checkbox') return field.checked;
+                    return field.value.trim() !== '';
+                });
+
+                const progress = (completedFields.length / totalFields.length) * 100;
+                progressBar.style.width = progress + '%';
+            }
+
+            // Update progress on input
+            form.addEventListener('input', updateProgress);
+            form.addEventListener('change', updateProgress);
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            createParticles();
+            setupFileUploads();
+            setupFormSubmission();
+            setupRealTimeValidation();
+            setupSmoothScroll();
+            setupFormEnhancements();
+            setupProgressIndicator();
+
+            // Add staggered animation to form groups
+            const formGroups = document.querySelectorAll('.form-group');
+            formGroups.forEach((group, index) => {
+                group.style.animationDelay = (index * 0.1) + 's';
+            });
+
+            // Add typing effect to hero subtitle
+            const subtitle = document.querySelector('.hero-subtitle');
+            const text = subtitle.textContent;
+            subtitle.textContent = '';
+
+            let i = 0;
+            const typeWriter = () => {
+                if (i < text.length) {
+                    subtitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 30);
+                }
+            };
+
+            setTimeout(typeWriter, 1000);
+        });
+
+        // Handle window resize for responsive adjustments
+        window.addEventListener('resize', function () {
+            // Recalculate any dynamic elements if needed
+            const particles = document.querySelectorAll('.particle');
+            particles.forEach(particle => {
+                particle.style.left = Math.random() * 100 + '%';
+            });
+        });
+
+        // Keyboard navigation enhancements
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && e.target.matches('.form-control, .form-select')) {
+                e.preventDefault();
+                const formElements = Array.from(document.querySelectorAll('.form-control, .form-select, .form-check-input'));
+                const currentIndex = formElements.indexOf(e.target);
+                const nextElement = formElements[currentIndex + 1];
+
+                if (nextElement) {
+                    nextElement.focus();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

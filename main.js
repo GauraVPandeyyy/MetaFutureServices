@@ -603,35 +603,8 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const submitBtn = document.getElementById('submitBtn');
-    const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
+    
 
-    // Hide previous messages
-    successMessage.style.display = 'none';
-    errorMessage.style.display = 'none';
-
-    // Show loading state
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i><span>Sending...</span>';
-
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-        // Simulate success (90% success rate for demo)
-        if (Math.random() > 0.1) {
-            successMessage.style.display = 'flex';
-            this.reset();
-
-            // Reset button after success
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i><span>Send Message</span>';
-            }, 2000);
-        } else {
-            errorMessage.style.display = 'flex';
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i><span>Send Message</span>';
-        }
-    }, 2000);
 });
 
 // Form field animations

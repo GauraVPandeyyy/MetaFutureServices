@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers @ MFS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="career.css">
+
+</head>
+
+<body>
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="careers-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <a href="#" class="brand-logo">
+                        <!-- <i class="fas fa-code"></i> -->
+                        <img src="./assets/mfs-logo.jpg" height="60" alt="">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="../index.html" class="text-blue text-decoration-none">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h1 class="hero-title">Join Our Team</h1>
+                <p class="hero-subtitle">
+                    Shape the future of technology with us. We're looking for passionate individuals
+                    who want to make a difference in the IT solutions landscape.
+                </p>
+            </div>
+
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Team Members</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">CYears Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-section container">
+        <div class="card-section-header text-center">
+            <h1>
+                Open Positions
+            </h1>
+            <p>Discover exciting internship opportunities across different domains and kickstart your career in
+                technology.</p>
+        </div>
+        <div class="card-section-content">
+            <div class="row">
+                <div class="col-4 career-card p-3 text-white">
+                    <img src="../assets/code.png" class="career-icon" alt="">
+                    <h5 class="fw-bold career-title">Frontend-developer</h5>
+                    <p class="fw-light career-description">Join our frontend team to build cutting-edge user interfaces using modern web
+                        technologies.</p>
+                    <a href="#form">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Main Container -->
+    <div class="main-container" data-aos="zoom-in">
+        <div class="form-container" id="#form">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Career Application</h2>
+                <p class="section-subtitle">
+                    Tell us about yourself and let's explore opportunities together
+                </p>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle me-2"></i>
+                Application submitted successfully! We'll get back to you soon.
+            </div>
+
+            <!-- Application Form -->
+            <form id="careerForm" novalidate>
+                <!-- Personal Information -->
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-user"></i>
+                        Personal Information
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">First Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="firstName" required>
+                            <div class="error-message">Please enter your first name</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Last Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="lastName" required>
+                            <div class="error-message">Please enter your last name</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email Address <span class="required">*</span></label>
+                            <input type="email" class="form-control" name="email" required>
+                            <div class="error-message">Please enter a valid email address</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Phone Number <span class="required">*</span></label>
+                            <input type="tel" class="form-control" name="phone" required>
+                            <div class="error-message">Please enter your phone number</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" name="address" placeholder="Street address">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control" name="city">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Information -->
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-briefcase"></i>
+                        Professional Information
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Position Applied For <span class="required">*</span></label>
+                            <select class="form-select" name="position" required>
+                                <option value="">Select a position</option>
+                                <option value="frontend-developer">Frontend Developer</option>
+                                <option value="backend-developer">Backend Developer</option>
+                                <option value="fullstack-developer">Full Stack Developer</option>
+
+                                <option value="ui-ux-designer">UI/UX Designer</option>
+                                <option value="project-manager">Project Manager</option>
+                                <option value="qa-engineer">QA Engineer</option>
+                                <option value="cybersecurity-specialist">Cybersecurity Specialist</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message">Please select a position</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Experience Level <span class="required">*</span></label>
+                            <select class="form-select" name="experience" required>
+                                <option value="">Select experience level</option>
+                                <option value="entry-level">Entry Level (0-2 years)</option>
+                                <option value="mid-level">Mid Level (2-5 years)</option>
+                                <option value="senior-level">Senior Level (5-8 years)</option>
+                                <option value="lead-level">Lead Level (8+ years)</option>
+                            </select>
+                            <div class="error-message">Please select your experience level</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Current/Previous Company</label>
+                            <input type="text" class="form-control" name="currentCompany">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Expected Salary Range</label>
+                            <select class="form-select" name="salaryRange">
+                                <option value="">Select salary range</option>
+                                <option value="30k-50k">₹30,000 - ₹50,000</option>
+                                <option value="50k-70k">₹50,000 - ₹70,000</option>
+                                <option value="70k-90k">₹70,000 - ₹90,000</option>
+                                <option value="90k-120k">₹90,000 - ₹120,000</option>
+                                <option value="120k+">₹120,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Technical Skills <span class="required">*</span></label>
+                        <textarea class="form-control" name="skills" rows="3"
+                            placeholder="List your key technical skills, programming languages, frameworks, tools, etc."
+                            required></textarea>
+                        <div class="error-message">Please list your technical skills</div>
+                    </div>
+                </div>
+
+                <!-- Professional Links -->
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-link"></i>
+                        Professional Links
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">LinkedIn Profile</label>
+                            <input type="url" class="form-control" name="linkedin"
+                                placeholder="https://linkedin.com/in/yourprofile">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">GitHub Profile</label>
+                            <input type="url" class="form-control" name="github"
+                                placeholder="https://github.com/yourusername">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Portfolio Website</label>
+                            <input type="url" class="form-control" name="portfolio"
+                                placeholder="https://yourportfolio.com">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Other Professional Link</label>
+                            <input type="url" class="form-control" name="otherLink" placeholder="https://example.com">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documents -->
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-file-alt"></i>
+                        Documents
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Resume/CV <span class="required">*</span></label>
+                            <div class="file-upload">
+                                <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+                                <div class="file-upload-btn">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload Resume</span>
+                                </div>
+                                <div class="file-name"></div>
+                            </div>
+                            <div class="error-message">Please upload your resume</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Cover Letter</label>
+                            <div class="file-upload">
+                                <input type="file" name="coverLetter" accept=".pdf,.doc,.docx">
+                                <div class="file-upload-btn">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload Cover Letter</span>
+                                </div>
+                                <div class="file-name"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information
+                <div class="form-group fade-in">
+                    <h3 class="group-title">
+                        <i class="fas fa-comment-alt"></i>
+                        Additional Information
+                    </h3>
+                    <div class="mb-3">
+                        <label class="form-label">Why do you want to join our team?</label>
+                        <textarea class="form-control" name="motivation" rows="4"
+                            placeholder="Tell us what motivates you to work with us and how you can contribute to our team..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Availability</label>
+                        <select class="form-select" name="availability">
+                            <option value="">Select availability</option>
+                            <option value="immediate">Immediate</option>
+                            <option value="2-weeks">2 weeks notice</option>
+                            <option value="1-month">1 month notice</option>
+                            <option value="2-months">2 months notice</option>
+                            <option value="negotiable">Negotiable</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="remoteWork" id="remoteWork">
+                                <label class="form-check-label" for="remoteWork">
+                                    Open to remote work
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="relocation" id="relocation">
+                                <label class="form-check-label" for="relocation">
+                                    Willing to relocate
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="newsletter" id="newsletter"
+                                    checked>
+                                <label class="form-check-label" for="newsletter">
+                                    Subscribe to our newsletter
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="terms" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to the <a href="#" class="text-decoration-none">terms and conditions</a>
+                                    <span class="required">*</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Submit Section -->
+                <div class="submit-section fade-in">
+                    <button type="submit" class="btn-submit">
+                        <span class="spinner"></span>
+                        <span class="btn-text">Submit Application</span>
+                    </button>
+                    <p class="mt-3 text-muted">
+                        <i class="fas fa-shield-alt me-1"></i>
+                        Your information is secure and will only be used for recruitment purposes
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="career.js"></script>
+</body>
+
+</html>

@@ -12,6 +12,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, #284283 0%, #3b5aa0 50%, #1e3a8a 100%);
+    /* background:red; */
 }
 
 
@@ -109,7 +110,7 @@ body {
     box-shadow: var(--shadow-heavy);
     background: rgba(255, 255, 255, 0.5) !important;
     top: 0 !important;
-    color: red !important;
+    /* color: red !important; */
     /* color: var(--primary-color) !important; */
 }
 
@@ -1782,8 +1783,8 @@ body {
 }
 
 .contact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-heavy);
+    /* transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy); */
     border-color: rgba(40, 66, 131, 0.3);
 }
 
