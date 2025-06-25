@@ -53,7 +53,7 @@
             max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
             opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
             padding 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-            
+
     }
 
 
@@ -98,6 +98,11 @@
     .map-info {
         height: 115%;
     }
+    .footer-bottom-content{
+        text-align: center;
+    }
+    
+
 }
 
 /* Responsive Design */
@@ -262,9 +267,10 @@
 
     /* contact */
 
-    .contact-section{
+    .contact-section {
         margin-top: -100px;
     }
+
     .section-title {
         font-size: 2.5rem;
         color: red !important;
@@ -313,13 +319,25 @@
 
     .footer-bottom-content {
         flex-direction: column;
-        text-align: center;
+        /* text-align: center; */
+
     }
 
     .footer-bottom-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+        /* gap: 0.5rem; */
+        /* text-align: start; */
+        /* margin-right: 12px; */
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom-links a {
+        font-size: 0.8rem;
+
     }
 
     .map-info {
