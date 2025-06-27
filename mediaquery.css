@@ -95,12 +95,7 @@
         font-size: 1.5rem;
     }
 
-    .map-info {
-        height: 115%;
-    }
-    .footer-bottom-content{
-        text-align: center;
-    }
+
     
 
 }
@@ -285,10 +280,7 @@
         margin-bottom: 2rem;
     }
 
-    .map-container {
-        height: 350px;
-        margin-bottom: 2rem;
-    }
+ 
 
     .floating-contact {
         bottom: 20px;
@@ -298,52 +290,7 @@
         font-size: 1.2rem;
     }
 
-    /* footer */
-    .footer-content {
-        padding: 60px 0 40px;
-    }
-
-    .footer-brand {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .footer-description {
-        text-align: center;
-        margin: 0 auto 2rem;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .footer-bottom-content {
-        flex-direction: column;
-        /* text-align: center; */
-
-    }
-
-    .footer-bottom-links {
-        /* flex-wrap: wrap; */
-        /* justify-content: center; */
-        /* gap: 0.5rem; */
-        /* text-align: start; */
-        /* margin-right: 12px; */
-    }
-
-    .copyright {
-        font-size: 0.8rem;
-    }
-
-    .footer-bottom-links a {
-        font-size: 0.8rem;
-
-    }
-
-    .map-info {
-        height: 80%;
-    }
-
+  
     /* extra */
 
 

@@ -1,4 +1,3 @@
-
 // Initialize AOS
 AOS.init({
     duration: 600,
@@ -21,8 +20,44 @@ function createParticles() {
     }
 }
 
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
 
-// Advanced GSAP Animations
+// Handle window resize for responsive adjustments
+window.addEventListener('resize', function () {
+    // Recalculate any dynamic elements if needed
+    const particles = document.querySelectorAll('.particle');
+    particles.forEach(particle => {
+        particle.style.left = Math.random() * 100 + '%';
+    });
+});
+
+// Keyboard navigation enhancements
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.matches('.form-control, .form-select')) {
+        e.preventDefault();
+        const formElements = Array.from(document.querySelectorAll('.form-control, .form-select, .form-check-input'));
+        const currentIndex = formElements.indexOf(e.target);
+        const nextElement = formElements[currentIndex + 1];
+
+        if (nextElement) {
+            nextElement.focus();
+        }
+    }
+});
+
+// --- Merge all DOMContentLoaded logic here ---
 document.addEventListener('DOMContentLoaded', function () {
     // Hero title animation
     createParticles();
@@ -102,48 +137,8 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-});
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Handle window resize for responsive adjustments
-window.addEventListener('resize', function () {
-    // Recalculate any dynamic elements if needed
-    const particles = document.querySelectorAll('.particle');
-    particles.forEach(particle => {
-        particle.style.left = Math.random() * 100 + '%';
-    });
-});
-
-// Keyboard navigation enhancements
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' && e.target.matches('.form-control, .form-select')) {
-        e.preventDefault();
-        const formElements = Array.from(document.querySelectorAll('.form-control, .form-select, .form-check-input'));
-        const currentIndex = formElements.indexOf(e.target);
-        const nextElement = formElements[currentIndex + 1];
-
-        if (nextElement) {
-            nextElement.focus();
-        }
-    }
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
+    // --- Form logic ---
     const form = document.getElementById('applicationForm');
     const submitBtn = document.getElementById('submitBtn');
     const btnText = submitBtn.querySelector('.btn-text');
@@ -183,11 +178,52 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Form submission
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        if (validateForm()) {
-            submitForm();
+        // Validate all fields
+        let isValid = true;
+        inputs.forEach(input => {
+            if (!validateField(input)) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) return; // Stop if any field is invalid
+
+        // All fields valid, submit form
+        submitBtn.disabled = true;
+        btnText.innerHTML = '<span class="loading"></span>Submitting...';
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch('https://mfs.winxx777.live/api/send-resume', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.status) {
+                // Show API success message
+                form.style.display = 'none';
+                successMessage.querySelector('h4').textContent = data.message || "Application Submitted Successfully!";
+                successMessage.classList.add('show');
+                setTimeout(() => {
+                    resetForm();
+                    bootstrapModal.hide();
+                }, 3000);
+            } else {
+                // Show API error message
+                showError('resume', data.message || 'Submission failed. Please try again.');
+                submitBtn.disabled = false;
+                btnText.innerHTML = 'Submit Application';
+            }
+        } catch (err) {
+            showError('resume', 'Network error. Please try again.');
+            submitBtn.disabled = false;
+            btnText.innerHTML = 'Submit Application';
         }
     });
 
@@ -202,24 +238,23 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (fieldName === 'email' && !isValidEmail(value)) {
             showError(fieldName, 'Please enter a valid email address.');
             isValid = false;
-        } else if (fieldName === 'resume' && !field.files[0]) {
-            showError(fieldName, 'This field is required.');
-            isValid = false;
+        } else if (fieldName === 'resume') {
+            const file = field.files[0];
+            if (!file) {
+                showError(fieldName, 'This field is required.');
+                isValid = false;
+            } else if (file.type !== "application/pdf") {
+                showError(fieldName, 'Only PDF files are allowed.');
+                isValid = false;
+            } else if (file.size > 5 * 1024 * 1024) {
+                showError(fieldName, 'File size must be less than 5MB.');
+                isValid = false;
+            } else {
+                clearError(fieldName);
+            }
         } else {
             clearError(fieldName);
         }
-
-        return isValid;
-    }
-
-    function validateForm() {
-        let isValid = true;
-
-        inputs.forEach(input => {
-            if (!validateField(input)) {
-                isValid = false;
-            }
-        });
 
         return isValid;
     }
@@ -254,25 +289,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
-    }
-
-    function submitForm() {
-        // Disable submit button and show loading
-        submitBtn.disabled = true;
-        btnText.innerHTML = '<span class="loading"></span>Submitting...';
-
-        // Simulate form submission (replace with actual submission logic)
-        setTimeout(() => {
-            // Hide form and show success message
-            form.style.display = 'none';
-            successMessage.classList.add('show');
-
-            // Reset after 3 seconds
-            setTimeout(() => {
-                resetForm();
-                bootstrapModal.hide();
-            }, 3000);
-        }, 2000);
     }
 
     function resetForm() {

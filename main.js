@@ -45,8 +45,8 @@ window.addEventListener('scroll', function () {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        console.log(sectionTop);
-        console.log(window.pageYOffset);
+        // console.log(sectionTop);
+        // console.log(window.pageYOffset);
         const sectionHeight = section.clientHeight;
         if (window.pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
@@ -599,13 +599,13 @@ document.querySelectorAll('.ceo-container, .photo-container').forEach(el => {
 
 // contact us
 // Contact Form Submission
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+// document.getElementById('contactForm').addEventListener('submit', function (e) {
+//     e.preventDefault();
 
-    const submitBtn = document.getElementById('submitBtn');
+//     const submitBtn = document.getElementById('submitBtn');
     
 
-});
+// });
 
 // Form field animations
 document.querySelectorAll('.form-control, .form-select').forEach(field => {
@@ -646,15 +646,15 @@ function changePlaceholder() {
 setInterval(changePlaceholder, 3000);
 
 // Add real-time form validation
-document.querySelectorAll('input[required], textarea[required]').forEach(field => {
-    field.addEventListener('input', function () {
-        if (this.value.trim()) {
-            this.style.borderColor = 'var(--success-color)';
-        } else {
-            this.style.borderColor = 'rgba(40, 66, 131, 0.1)';
-        }
-    });
-});
+// document.querySelectorAll('input[required], textarea[required]').forEach(field => {
+//     field.addEventListener('input', function () {
+//         if (this.value.trim()) {
+//             this.style.borderColor = 'var(--success-color)';
+//         } else {
+//             this.style.borderColor = 'rgba(40, 66, 131, 0.1)';
+//         }
+//     });
+// });
 
 
 // footer
