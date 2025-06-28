@@ -57,6 +57,24 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+
+
+document.querySelectorAll(".btn-apply-now, .join-team-badge").forEach(function (element) {
+    element.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.getElementById("job-openings");
+        if (target) {
+            const offsetTop = target.offsetTop - 87;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
+
 // --- Merge all DOMContentLoaded logic here ---
 document.addEventListener('DOMContentLoaded', function () {
     // Hero title animation
@@ -139,14 +157,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // --- Form logic ---
-    const form = document.getElementById('applicationForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const successMessage = document.getElementById('successMessage');
-    const modal = document.getElementById('applyModal');
-    const bootstrapModal = new bootstrap.Modal(modal);
 
-    // File upload handling
+
+
+
+
+    // const modal = document.getElementById('applyModal');
+
+
     const fileInput = document.getElementById('resume');
     const fileLabel = fileInput.nextElementSibling;
     const fileText = fileLabel.querySelector('.file-upload-text');
@@ -163,156 +181,114 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Real-time validation
-    const inputs = form.querySelectorAll('input[required]');
-    inputs.forEach(input => {
-        input.addEventListener('input', function () {
-            if (this.value.trim()) {
-                clearError(this.name);
-            }
-        });
 
-        input.addEventListener('blur', function () {
-            validateField(this);
-        });
-    });
+    //      APPLICATION FORM HANDLER
 
-    // Form submission
-    form.addEventListener('submit', async function (e) {
+    const form = document.getElementById("applicationForm");
+    const submitBtn = document.getElementById("submitBtn");
+
+    // Clear all error messages
+    function clearErrors() {
+        const errorFields = ["full_name", "email", "phone", "resume"];
+        errorFields.forEach(field => {
+            const errorSpan = document.getElementById(`${field}Error`);
+            if (errorSpan == resumeError) errorSpan.value = "";
+            else if (errorSpan) errorSpan.textContent = "";            
+        });
+    }
+
+
+    function showToast(message, isSuccess = true) {
+        Swal.fire({
+            icon: isSuccess ? 'success' : 'error',
+            title: isSuccess ? 'Success!' : 'Error!',
+            text: message,
+            confirmButtonColor: isSuccess ? '#3085d6' : '#d33',
+            timer: 4000,
+            timerProgressBar: true
+        });
+    }
+
+    // Handle API response and display errors
+    function handleErrors(errorMsg) {
+        // Laravel returns only one error at a time, so we find the relevant field
+        console.log(errorMsg);
+        const lowerMsg = errorMsg.toLowerCase();
+
+        if (lowerMsg.includes("full name")) {
+            document.getElementById("full_nameError").textContent = errorMsg;
+        } else if (lowerMsg.includes("email")) {
+            document.getElementById("emailError").textContent = errorMsg;
+        } else if (lowerMsg.includes("phone")) {
+            document.getElementById("phoneError").textContent = errorMsg;
+        } else if (lowerMsg.includes("resume")) {
+            document.getElementById("resumeError").textContent = errorMsg;
+        } else {
+            // General fallback
+            showToast(errorMsg, false);
+        }
+    }
+
+    // Prepare and submit form data
+    form.addEventListener("submit", async (e) => {
         e.preventDefault();
-
-        // Validate all fields
-        let isValid = true;
-        inputs.forEach(input => {
-            if (!validateField(input)) {
-                isValid = false;
-            }
-        });
-
-        if (!isValid) return; // Stop if any field is invalid
-
-        // All fields valid, submit form
-        submitBtn.disabled = true;
-        btnText.innerHTML = '<span class="loading"></span>Submitting...';
+        clearErrors();
 
         const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('https://mfs.winxx777.live/api/send-resume', {
-                method: 'POST',
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin me-2"></i>Sending...`;
+
+            const response = await fetch("https://mfs.winxx777.live/api/send-resume", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json"
+                },
                 body: formData
             });
 
-            const data = await response.json();
-
-            if (response.ok && data.status) {
-                // Show API success message
-                form.style.display = 'none';
-                successMessage.querySelector('h4').textContent = data.message || "Application Submitted Successfully!";
-                successMessage.classList.add('show');
-                setTimeout(() => {
-                    resetForm();
-                    bootstrapModal.hide();
-                }, 3000);
+            const result = await response.json();
+            console.log(result);
+            console.log(response);
+            if (response.status === 200 && result.status === true) {
+                showToast("Form submitted successfully!", true);
+                form.reset();
+            } else if (response.status === 422) {
+                handleErrors(result.message || "Please fix the errors and try again.");
             } else {
-                // Show API error message
-                showError('resume', data.message || 'Submission failed. Please try again.');
-                submitBtn.disabled = false;
-                btnText.innerHTML = 'Submit Application';
+                showToast(result.message || "Something went wrong. Try again later.", false);
             }
-        } catch (err) {
-            showError('resume', 'Network error. Please try again.');
+        } catch (error) {
+            console.error("Error:", error);
+            showToast("Network/server error. Please try again later.", false);
+        } finally {
             submitBtn.disabled = false;
-            btnText.innerHTML = 'Submit Application';
+            submitBtn.innerHTML = `<i class="fas fa-paper-plane me-2"></i><span>Send Message</span>`;
         }
     });
 
-    function validateField(field) {
-        const fieldName = field.name;
-        const value = field.value.trim();
-        let isValid = true;
+    // function resetForm() {
 
-        if (!value) {
-            showError(fieldName, 'This field is required.');
-            isValid = false;
-        } else if (fieldName === 'email' && !isValidEmail(value)) {
-            showError(fieldName, 'Please enter a valid email address.');
-            isValid = false;
-        } else if (fieldName === 'resume') {
-            const file = field.files[0];
-            if (!file) {
-                showError(fieldName, 'This field is required.');
-                isValid = false;
-            } else if (file.type !== "application/pdf") {
-                showError(fieldName, 'Only PDF files are allowed.');
-                isValid = false;
-            } else if (file.size > 5 * 1024 * 1024) {
-                showError(fieldName, 'File size must be less than 5MB.');
-                isValid = false;
-            } else {
-                clearError(fieldName);
-            }
-        } else {
-            clearError(fieldName);
-        }
+    //     form.reset();
+    //     form.style.display = 'block';
+    //     successMessage.classList.remove('show');
 
-        return isValid;
-    }
 
-    function showError(fieldName, message) {
-        const field = document.querySelector(`[name="${fieldName}"]`);
-        const errorElement = document.getElementById(`${fieldName}Error`);
+    //     submitBtn.disabled = false;
+    //     btnText.innerHTML = 'Submit Application';
 
-        field.classList.add('error');
-        errorElement.textContent = message;
-        errorElement.classList.add('show');
 
-        // Add special handling for file upload
-        if (fieldName === 'resume') {
-            fileLabel.style.borderColor = '#e74c3c';
-        }
-    }
+    //     fileText.textContent = 'Choose Resume File';
+    //     fileLabel.classList.remove('file-selected');
 
-    function clearError(fieldName) {
-        const field = document.querySelector(`[name="${fieldName}"]`);
-        const errorElement = document.getElementById(`${fieldName}Error`);
 
-        field.classList.remove('error');
-        errorElement.classList.remove('show');
-
-        // Add special handling for file upload
-        if (fieldName === 'resume') {
-            fileLabel.style.borderColor = '#284283';
-        }
-    }
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    function resetForm() {
-        // Reset form
-        form.reset();
-        form.style.display = 'block';
-        successMessage.classList.remove('show');
-
-        // Reset submit button
-        submitBtn.disabled = false;
-        btnText.innerHTML = 'Submit Application';
-
-        // Reset file upload display
-        fileText.textContent = 'Choose Resume File';
-        fileLabel.classList.remove('file-selected');
-
-        // Clear all errors
-        inputs.forEach(input => {
-            clearError(input.name);
-        });
-    }
+    //     inputs.forEach(input => {
+    //         clearError(input.name);
+    //     });
+    // }
 
     // Reset form when modal is closed
-    modal.addEventListener('hidden.bs.modal', function () {
-        resetForm();
-    });
+
 });
